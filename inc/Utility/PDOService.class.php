@@ -18,7 +18,7 @@ class PDOService {
     private $_className;
 
     //Store the Query Statement;
-    private  $_pstmt;
+    private $_pstmt;
 
 
     //Construct our wrapper, build the DSN
@@ -27,7 +27,7 @@ class PDOService {
         $this->_className = $className;
 
         //Assemble the DSN (Data Source Name)
-        $dsn = 'mysql:host=' .$this->_host. ';dbname=' .$this->_dbname. ';port=3306';
+        $dsn = 'mysql:host=' .$this->_host. ';dbname=' .$this->_dbname. ';port=3308';
 
         //Set the options for PDO
         $options = array (
@@ -41,6 +41,52 @@ class PDOService {
         } catch (PDOException $pe)   {
             $this->_error = $pe->getMessage();
         }
+
+    }
+
+    //This function prepares, binds dynamically if necessary, and executes a sql statement.
+    //References:
+    //    Regular Expressions:
+    //          https://www.php.net/manual/en/ref.pcre.php
+    //    Reflections:
+    //          https://www.php.net/manual/en/reflectionmethod.invoke.php
+    //
+    // $parameters is a dynamic argument which might hold Object references, associative arrays or primitive data type values
+    public function execute_direct($queryString, $parameters=null) {
+        //prepare
+        $this->_pstmt = $this->_dbh->prepare($queryString);
+
+        //bind, in case of query string which includes a placeholder ":variable"
+        // If $parameters is an object:
+        //      $this->bind(':propertyName',$parameters->get<PropertyName>());
+        // If $parameters is an array:
+        //      $this->bind(':propertyName',$parameters["propertyName"]);
+        // Else $parameters is a primitive datatype:
+        //      $this->bind(':propertyName',$parameters);
+        //
+        $placeHolderPattern = '/\:([a-zA-Z0-9_]+){1}/'; // a placeholder in a sql query string has the following pattern: a colon ':' followed by a group of alphanumeric and/or underscore characters
+        $offset = 0; //Starting point of the pattern search
+        while (preg_match($placeHolderPattern, $queryString, $matches, PREG_OFFSET_CAPTURE, $offset)){
+            $propertyName = $matches[1][0];
+            if (gettype($parameters)=='object') { //it is an object instance, then try to use getter method to bind
+                //getter method
+                $getterMethodName = "get" . ucfirst($propertyName); // ucfirst() converts the first character of a string to Uppercase. 
+                $reflectionGetPropertyMethod = new ReflectionMethod($this->_className, $getterMethodName);
+                //bind to the value of object's getter method
+                $this->bind(':'.$propertyName,$reflectionGetPropertyMethod->invoke($parameters));
+            } elseif (gettype($parameters)=='array') {
+                //bind to the value in the array indexed by the propertyName
+                $this->bind(':'.$propertyName,$parameters[$propertyName]);
+            } else {
+                //presumably is a primitive data type, so bind to the value in $parameters
+                $this->bind(':'.$propertyName,$parameters);
+            }
+            //next search/match is going start after the last colon ':' found
+            $offset = $matches[1][1];
+        }
+
+        //execute
+        return $this->_pstmt->execute();
 
     }
 
