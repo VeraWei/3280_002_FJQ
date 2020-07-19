@@ -17,13 +17,19 @@ class LoginDAO  {
     static function getUser(int $StudentID, string $pwd) {
        
         //QUERY, BIND, EXECUTE, RETURN
-        $selectOne = "SELECT * FROM PASSWORDS WHERE StudentID = :StudentID AND Password = :pwd;";
+        
+        try {
+            $selectOne = "SELECT * FROM PASSWORDS WHERE StudentID = :StudentID AND Password = :pwd;";
+    
+            self::$db->query($selectOne);
+            self::$db->bind(':StudentID', $StudentID);
+            self::$db->bind(':pwd', $pwd);
+            self::$db->execute();
+            return self::$db->singleResult();
 
-        self::$db->query($selectOne);
-        self::$db->bind(':StudentID', $StudentID);
-        self::$db->bind(':pwd', $pwd);
-        self::$db->execute();
-        return self::$db->singleResult();
+        } catch(PDOException $pe) {
+            $pe->getMessage();
+        }
         
     }
 

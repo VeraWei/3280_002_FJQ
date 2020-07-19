@@ -6,6 +6,7 @@ class PDOService {
 
     //Pull in the attributes from the config
     private  $_host = DB_HOST;  
+    private  $_port = DB_PORT;
     private  $_user = DB_USER;  
     private  $_pass = DB_PASS;  
     private  $_dbname = DB_NAME;  
@@ -27,7 +28,7 @@ class PDOService {
         $this->_className = $className;
 
         //Assemble the DSN (Data Source Name)
-        $dsn = 'mysql:host=' .$this->_host. ';dbname=' .$this->_dbname. ';port=3308';
+        $dsn = 'mysql:host=' .$this->_host. ';dbname=' .$this->_dbname. ';port='.$this->_port;
 
         //Set the options for PDO
         $options = array (
