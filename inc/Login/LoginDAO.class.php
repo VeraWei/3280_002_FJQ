@@ -14,28 +14,19 @@ class LoginDAO  {
     }
 
     //Get all the Users
-    // static function getUser() {
-        
-    //     // SELECT
-    //     $selectAll = "SELECT * FROM User;";
-        
-        
-    //     //Prepare the Query
-    //     self::$db->query($selectAll);
-        
-    //     //Return the results
-    //     self::$db->execute();
-        
-    //     //Return the resultSet
-    //     return self::$db->resultSet();       
-        
-    // }
+    static function getUser(int $StudentID, string $pwd) {
+       
+        //QUERY, BIND, EXECUTE, RETURN
+        $selectOne = "SELECT * FROM PASSWORDS WHERE StudentID = :StudentID AND Password = :pwd;";
 
-    // change pin
-    static function changePIN(String $newPin) {
-
-        return true;  
+        self::$db->query($selectOne);
+        self::$db->bind(':StudentID', $StudentID);
+        self::$db->bind(':pwd', $pwd);
+        self::$db->execute();
+        return self::$db->singleResult();
+        
     }
+
 }
 
 

@@ -5,16 +5,16 @@ Class Login {
     // Make sure to have attributes and get only the fields we need here
 
     //Attributes
-    private $UserID;
-    private $PIN;
+    private $StudentID;
+    private $Password;
 
 
     //Getters
-    function getUserId() : int {
-        return $this->UserID;
+    function getStudentID() : int {
+        return $this->StudentID;
     }
-    function getPIN() : string {
-        return $this->PIN;
+    function getPassword() : string {
+        return $this->Password;
     }
     
 }

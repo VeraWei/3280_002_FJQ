@@ -19,14 +19,9 @@ LoginDAO::initialize("Login");
 
 //If there was post data from an edit form then process it
 if (!empty($_POST)) {
-    
- 
-}
-
-//If there was a delete that came in via GET
-if (isset($_GET["action"]) && $_GET["action"] == "change")  {
-    //Use the DAO to delete the corresponding Reservation
-    LoginDAO::changePIN($_GET['newPin']);
+    $sid = $_POST["sid"];
+    $pwd = $_POST["PIN"];
+    LoginDAO::getUser($sid, $pwd);
 }
 
 // Display the header (remeber to set the title/heading)
@@ -34,16 +29,15 @@ LoginPage::$title = "User Login";
 // Call the HTML header
 LoginPage::header();
 
-// Show description of Login page
-LoginPage::loginDescription();
 
-// Show login form of Login page
-if (isset($_GET["action"]) && $_GET["action"] == "change")  {
-    LoginPage::forgetPinForm();
-    
-} else {
-    
+if (!$sid) {
+    // Show description of Login page
+    LoginPage::loginDescription();
+    // Show login form of Login page
     LoginPage::loginForm();
+} else {
+    // TODO: Registration page
+    LoginPage::success();
 }
 
 // Finally I need to call the last function from the HTML

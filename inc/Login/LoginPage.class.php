@@ -45,7 +45,7 @@ class LoginPage  {
         <!-- Start the page's add entry form -->
         <section class="form1">
 
-                <form action="" method="post" NAME="loginform" AUTOCOMPLETE="OFF">
+                <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post" NAME="loginform" AUTOCOMPLETE="OFF">
                     <table  CLASS="dataentrytable" SUMMARY="This data entry table is used to format the user login fields">
                         <tr>
                             <td CLASS="delabel" scope="row" ><LABEL for=UserID><SPAN class="fieldlabeltext">User ID:</SPAN></LABEL></td>
@@ -58,8 +58,6 @@ class LoginPage  {
                     </table>
                     <p>
                     <input type="submit" value="Login" />
-                    &nbsp;
-                    <a href="<?php echo $_SERVER["PHP_SELF"]."?action=change" ?>"> Forgot PIN?/Change PIN?</a>
                 </form>
             </section>
 
@@ -93,5 +91,11 @@ class LoginPage  {
     
         <?php
 
+    }
+
+    static function success() {
+        ?>
+        <h1>Login success</h1>
+        <?php
     }
 }

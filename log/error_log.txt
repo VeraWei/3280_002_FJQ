@@ -27,3 +27,38 @@ Stack trace:
 #0 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(29): LoginDAO::changePIN(NULL)
 #1 {main}
   thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php on line 35
+[19-Jul-2020 13:16:46 America/Vancouver] PHP Fatal error:  Uncaught Error: Array callback has to contain indices 0 and 1 in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:19:18 America/Vancouver] PHP Fatal error:  Uncaught Error: Function name must be a string in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:19:21 America/Vancouver] PHP Fatal error:  Uncaught Error: Array callback has to contain indices 0 and 1 in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:19:59 America/Vancouver] PHP Fatal error:  Uncaught Error: Function name must be a string in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:22:06 America/Vancouver] PHP Fatal error:  Uncaught Error: Function name must be a string in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:23:01 America/Vancouver] PHP Fatal error:  Uncaught Error: Array callback has to contain indices 0 and 1 in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:23:33 America/Vancouver] PHP Fatal error:  Uncaught Error: Array callback has to contain indices 0 and 1 in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:22
+Stack trace:
+#0 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 22
+[19-Jul-2020 13:25:01 America/Vancouver] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'registrar.password' doesn't exist in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Utility/PDOService.class.php:83
+Stack trace:
+#0 /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Utility/PDOService.class.php(83): PDOStatement->execute()
+#1 /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php(25): PDOService->execute()
+#2 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(24): LoginDAO::getUser(300000001, 'Password1')
+#3 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Utility/PDOService.class.php on line 83
