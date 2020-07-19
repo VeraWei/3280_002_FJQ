@@ -7,11 +7,11 @@ require_once("inc/config.inc.php");
 require_once("inc/html_form.inc.php");
 
 // require all the entities
-require_once("inc/Login/Login.class.php");
-require_once("inc/Login/LoginPage.class.php");
+require_once("inc/Entity/Login.class.php");
+require_once("inc/Entity/LoginPage.class.php");
 
 // require all the utilities: PDO and DAO(s)
-require_once("inc/Login/LoginDAO.class.php");
+require_once("inc/Utility/LoginDAO.class.php");
 require_once("inc/Utility/PDOService.class.php");
 
 //Initialize the DAO(s)
