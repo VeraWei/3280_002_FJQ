@@ -15,7 +15,7 @@ class LoginPage
             <meta charset="utf-8">
             <meta name="author" content="Bambang">
             <title><?php echo self::$title; ?></title>
-            <link href="css/login.css" rel="stylesheet">
+            <link href="../css/login.css" rel="stylesheet">
         </head>
 
         <body>
@@ -67,7 +67,7 @@ class LoginPage
                         <table CLASS="dataentrytable" SUMMARY="This data entry table is used to format the user login fields">
                             <tr>
                                 <td CLASS="delabel" scope="row"><LABEL for=UserID><SPAN class="fieldlabeltext">User ID:</SPAN></LABEL></td>
-                                <td CLASS="dedefault"><input class="login-input" type="text" name="sid" size="26" maxlength="9" ID="UserID" /></td>
+                                <td CLASS="dedefault"><input class="login-input" type="text" name="username" size="26" maxlength="9" ID="UserID" /></td>
                             </tr>
                             <tr>
                                 <td CLASS="delabel" scope="row"><LABEL for=PIN><SPAN class="fieldlabeltext">PIN:</SPAN></LABEL></td>

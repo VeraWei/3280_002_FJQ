@@ -1,6 +1,6 @@
 <?php
 
-Class Login {
+Class User {
 
     // Make sure to have attributes and get only the fields we need here
 
