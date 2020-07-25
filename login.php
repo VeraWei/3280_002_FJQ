@@ -55,3 +55,5 @@ if (!$sid || $error) {
 
 // Finally I need to call the last function from the HTML
 LoginPage::footer();
+
+?>

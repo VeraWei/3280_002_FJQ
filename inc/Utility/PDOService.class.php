@@ -41,6 +41,7 @@ class PDOService {
             $this->_dbh = new PDO($dsn, $this->_user, $this->_pass, $options);
         } catch (PDOException $pe)   {
             $this->_error = $pe->getMessage();
+            error_log($this->_error);
         }
 
     }
@@ -157,3 +158,5 @@ class PDOService {
     }
 
 }
+
+?>

@@ -1,6 +1,6 @@
 <?php
 class SuperPage{
-    public static $title = "Class RouteTest";
+    public static $title = "Class SuperPage";
 
     public static $style = "css/styles.css";
 
@@ -76,14 +76,6 @@ class SuperPage{
     static function footer()
     { ?>
             </article>
-            <div class="footer">
-                <p class="pagefooterdiv">
-                    <span class="releasetext">Release: 0.0.1</span>
-                </p>
-                <div class="banner_copyright">
-                    <div>© 2020 Course 3280002 Team 1.<br>This software contains confidential and proprietary information of Douglas college or its subsidiaries.<br>Use of this software is limited for study purpose, any other commercial purpose is prohibited.</div>
-                </div>
-            </div>
         </body>
         </html>
     <?php }
@@ -112,16 +104,23 @@ class RouteTestPage extends SuperPage
 
     public static $author = "Fernando Maia (Overridden)";
     
+    public static $title = "this is the RouteTestPage";
+
     static function body()
     { ?>
         
         <div>
             <section class="form1">
+                <h2>test page</h2>
                 <!--<form action="<?php //echo $_SERVER["PHP_SELF"]; ?>" method="post">-->
                 <form action="<?php echo $_SERVER["REQUEST_URI"]; ?>" method="post">
                 <input type="text" value="Some value for input" />    
                 <input class="btn-primary" type="submit" value="Login" />
                 </form>
+                <P><br><a href="<?php echo Route::makeURL("test-page",array("action"=>"delete","id"=>1234)) ?>">click here to see an example of delete URI</a>
+                </p>
+                <br><a href="<?php echo Route::makeURL("test-page","action=update&otherArgument=someValue") ?>">click here to see another example of URI</a>
+                
             </section>
         </div>
 

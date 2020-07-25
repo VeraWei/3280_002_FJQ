@@ -125,3 +125,4 @@ class LoginPage
         <?php
         }
     }
+?>

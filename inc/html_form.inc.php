@@ -14,3 +14,5 @@ function validateForm($id, $pwd)    {
     return "pass";
 
 }
+
+?>
