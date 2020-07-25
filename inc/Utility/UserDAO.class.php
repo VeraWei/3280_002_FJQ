@@ -2,12 +2,12 @@
 
 //UserID	PIN
 
-class LoginDAO  {
+class UserDAO  {
 
     //Static DB member to store the database
     private static $db;
 
-    //Initialize the LoginDAO
+    //Initialize the UserDAO
     static function initialize(string $className)    {
         //Remember to send in the class name for this DAO
         self::$db = new PDOService($className);
