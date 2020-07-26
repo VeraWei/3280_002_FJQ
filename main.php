@@ -93,3 +93,5 @@ if (isset($_GET["action"]) && $_GET["action"] == "edit")  {
 
 // Finally I need to call the last function from the HTML
 Page::footer();
+
+?>

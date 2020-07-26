@@ -48,3 +48,5 @@ if (isset($_GET["action"]) && $_GET["action"] == "change")  {
 
 // Finally I need to call the last function from the HTML
 LoginPage::footer();
+
+?>
