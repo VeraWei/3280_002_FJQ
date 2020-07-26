@@ -181,5 +181,3 @@ class Page  {
 <?php }
 
 }
-
-?>

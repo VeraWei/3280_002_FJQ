@@ -1,129 +1,71 @@
-[25-Jul-2020 04:51:27 UTC] teste
-[25-Jul-2020 04:53:45 UTC] teste
-[25-Jul-2020 04:57:51 UTC] SQLSTATE[HY000] [1049] Unknown database 'registrar'
-[25-Jul-2020 04:57:51 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 04:57:51 UTC] PHP Stack trace:
-[25-Jul-2020 04:57:51 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 04:57:51 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 04:57:51 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:57:51 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:57:51 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 04:57:51 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 04:57:51 UTC] PHP Stack trace:
-[25-Jul-2020 04:57:51 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 04:57:51 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 04:57:51 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:57:51 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:57:51 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 04:59:21 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 04:59:21 UTC] PHP Stack trace:
-[25-Jul-2020 04:59:21 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 04:59:21 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 04:59:21 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:59:21 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:59:21 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 04:59:21 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 04:59:21 UTC] PHP Stack trace:
-[25-Jul-2020 04:59:21 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 04:59:21 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 04:59:21 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:59:21 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 04:59:21 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:08:44 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 05:08:44 UTC] PHP Stack trace:
-[25-Jul-2020 05:08:44 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:08:44 UTC] PHP   2. Route::set($method = *uninitialized*, $route = *uninitialized*, $function = *uninitialized*) C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:08:44 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 05:08:44 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 05:08:44 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:08:54 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 05:08:54 UTC] PHP Stack trace:
-[25-Jul-2020 05:08:54 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:08:54 UTC] PHP   2. Route::set($method = *uninitialized*, $route = *uninitialized*, $function = *uninitialized*) C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:08:54 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 05:08:54 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:17
-[25-Jul-2020 05:08:54 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:31:04 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 05:31:04 UTC] PHP Stack trace:
-[25-Jul-2020 05:31:04 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:31:04 UTC] PHP   2. Route::set($method = *uninitialized*, $route = *uninitialized*, $function = *uninitialized*) C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:31:04 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:31:04 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:31:04 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:31:07 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 05:31:07 UTC] PHP Stack trace:
-[25-Jul-2020 05:31:07 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:31:07 UTC] PHP   2. Route::set($method = *uninitialized*, $route = *uninitialized*, $function = *uninitialized*) C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:31:07 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:31:07 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:31:07 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:34:28 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 05:34:28 UTC] PHP Stack trace:
-[25-Jul-2020 05:34:28 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:34:28 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:34:28 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:34:28 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:34:28 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:34:28 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 05:34:28 UTC] PHP Stack trace:
-[25-Jul-2020 05:34:28 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:34:28 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:34:28 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:34:28 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:34:28 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:37:04 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 05:37:04 UTC] PHP Stack trace:
-[25-Jul-2020 05:37:04 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:37:04 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:37:04 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:04 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:04 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:37:04 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 05:37:04 UTC] PHP Stack trace:
-[25-Jul-2020 05:37:04 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:37:04 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:37:04 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:04 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:04 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:37:09 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 05:37:09 UTC] PHP Stack trace:
-[25-Jul-2020 05:37:09 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:37:09 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:37:09 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:09 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:09 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:37:09 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 05:37:09 UTC] PHP Stack trace:
-[25-Jul-2020 05:37:09 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:37:09 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:37:09 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:09 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:22-24}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:37:09 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23
-[25-Jul-2020 05:42:15 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 05:42:15 UTC] PHP Stack trace:
-[25-Jul-2020 05:42:15 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:42:15 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:25
-[25-Jul-2020 05:42:15 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:42:15 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23-25}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:42:15 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 05:42:15 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 05:42:15 UTC] PHP Stack trace:
-[25-Jul-2020 05:42:15 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 05:42:15 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:25
-[25-Jul-2020 05:42:15 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:42:15 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23-25}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 05:42:15 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 06:13:25 UTC] PHP Notice:  Undefined variable: sid in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 47
-[25-Jul-2020 06:13:25 UTC] PHP Stack trace:
-[25-Jul-2020 06:13:25 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 06:13:25 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:25
-[25-Jul-2020 06:13:25 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 06:13:25 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23-25}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 06:13:25 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
-[25-Jul-2020 06:13:25 UTC] PHP Notice:  Undefined variable: error in C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\login.php on line 49
-[25-Jul-2020 06:13:25 UTC] PHP Stack trace:
-[25-Jul-2020 06:13:25 UTC] PHP   1. {main}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:0
-[25-Jul-2020 06:13:25 UTC] PHP   2. Route::set() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:25
-[25-Jul-2020 06:13:25 UTC] PHP   3. Closure->__invoke() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 06:13:25 UTC] PHP   4. {closure:C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:23-25}() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\inc\utility\Route.class.php:19
-[25-Jul-2020 06:13:25 UTC] PHP   5. require() C:\Users\fernando\Dropbox\Canada\Douglas\Term2\CSIS-3280-002_WEB SCRIPTING\Repo\csis3280.practice.com\PROJECT\Team1\Team1.php:24
+[18-Jul-2020 17:23:56 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'PDOService' not found in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php:13
+Stack trace:
+#0 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(16): LoginDAO::initialize('Login')
+#1 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php on line 13
+[18-Jul-2020 17:25:32 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'PDOService' not found in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php:13
+Stack trace:
+#0 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(16): LoginDAO::initialize('Login')
+#1 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php on line 13
+[18-Jul-2020 17:25:32 America/Vancouver] PHP Stack trace:
+[18-Jul-2020 17:25:32 America/Vancouver] PHP   1. {main}() /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:0
+[18-Jul-2020 17:25:32 America/Vancouver] PHP   2. LoginDAO::initialize($className = *uninitialized*) /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:16
+[18-Jul-2020 17:43:40 America/Vancouver] PHP Notice:  Undefined index: newPin in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 29
+[18-Jul-2020 17:43:40 America/Vancouver] PHP Stack trace:
+[18-Jul-2020 17:43:40 America/Vancouver] PHP   1. {main}() /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:0
+[18-Jul-2020 17:43:40 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to LoginDAO::changePIN() must be of the type string, null given, called in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 29 and defined in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php:35
+Stack trace:
+#0 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(29): LoginDAO::changePIN(NULL)
+#1 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php on line 35
+[18-Jul-2020 17:43:59 America/Vancouver] PHP Notice:  Undefined index: newPin in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 29
+[18-Jul-2020 17:43:59 America/Vancouver] PHP Stack trace:
+[18-Jul-2020 17:43:59 America/Vancouver] PHP   1. {main}() /Users/vera/projects/courses/3280/3280_002_FJQ/login.php:0
+[18-Jul-2020 17:43:59 America/Vancouver] PHP Fatal error:  Uncaught TypeError: Argument 1 passed to LoginDAO::changePIN() must be of the type string, null given, called in /Users/vera/projects/courses/3280/3280_002_FJQ/login.php on line 29 and defined in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php:35
+Stack trace:
+#0 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(29): LoginDAO::changePIN(NULL)
+#1 {main}
+  thrown in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php on line 35
+[25-Jul-2020 06:31:42 UTC] PHP Warning:  require_once(inc/Utility/PDOAgent.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 4
+[25-Jul-2020 06:31:42 UTC] PHP Stack trace:
+[25-Jul-2020 06:31:42 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:31:42 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Utility/PDOAgent.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 4
+[25-Jul-2020 06:31:42 UTC] PHP Stack trace:
+[25-Jul-2020 06:31:42 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:32:21 UTC] PHP Warning:  require_once(inc/Utility/UserDAO.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 5
+[25-Jul-2020 06:32:22 UTC] PHP Stack trace:
+[25-Jul-2020 06:32:22 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:32:22 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Utility/UserDAO.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 5
+[25-Jul-2020 06:32:22 UTC] PHP Stack trace:
+[25-Jul-2020 06:32:22 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:40:57 UTC] PHP Warning:  require_once(inc/Entity/RegistrationPage.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:40:57 UTC] PHP Stack trace:
+[25-Jul-2020 06:40:57 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:40:57 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Entity/RegistrationPage.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:40:57 UTC] PHP Stack trace:
+[25-Jul-2020 06:40:57 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:41:36 UTC] PHP Warning:  require_once(inc/Entity/RegistrationPage.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:41:36 UTC] PHP Stack trace:
+[25-Jul-2020 06:41:36 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:41:36 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Entity/RegistrationPage.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:41:36 UTC] PHP Stack trace:
+[25-Jul-2020 06:41:36 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:42:40 UTC] PHP Warning:  require_once(inc/Entity/RegistrationPage.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:42:40 UTC] PHP Stack trace:
+[25-Jul-2020 06:42:40 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:42:40 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Entity/RegistrationPage.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:42:40 UTC] PHP Stack trace:
+[25-Jul-2020 06:42:40 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:42:42 UTC] PHP Warning:  require_once(inc/Entity/RegistrationPage.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:42:42 UTC] PHP Stack trace:
+[25-Jul-2020 06:42:42 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:42:42 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Entity/RegistrationPage.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php on line 7
+[25-Jul-2020 06:42:42 UTC] PHP Stack trace:
+[25-Jul-2020 06:42:42 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Registration.php:0
+[25-Jul-2020 06:45:52 UTC] PHP Warning:  require_once(inc/Entity/RegistrationPage.class.php): failed to open stream: No such file or directory in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\CourseRegistration.php on line 7
+[25-Jul-2020 06:45:52 UTC] PHP Stack trace:
+[25-Jul-2020 06:45:52 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\CourseRegistration.php:0
+[25-Jul-2020 06:45:52 UTC] PHP Fatal error:  require_once(): Failed opening required 'inc/Entity/RegistrationPage.class.php' (include_path='.;C:\php\pear') in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\CourseRegistration.php on line 7
+[25-Jul-2020 06:45:52 UTC] PHP Stack trace:
+[25-Jul-2020 06:45:52 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\CourseRegistration.php:0

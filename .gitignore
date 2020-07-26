@@ -1,8 +1,0 @@
-#Untracked files
-#
-#directory of logs
-log/*
-#directory for XDebug configuration
-.vscode/*
-# Databases are diferent
-inc/config.inc.php

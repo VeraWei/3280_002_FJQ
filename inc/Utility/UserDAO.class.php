@@ -1,39 +1,64 @@
 <?php
 
-//UserID	PIN
+class UserDAO   {
 
-class UserDAO  {
-
-    //Static DB member to store the database
+    // Create a member to store the PDO agent
     private static $db;
-
-    //Initialize the UserDAO
-    static function initialize(string $className)    {
-        //Remember to send in the class name for this DAO
-        self::$db = new PDOService($className);
+    // create the init function to start the PDO agent
+    static function init() {
+        self::$db = new PDOAgent("User");
     }
 
-    //Get all the Users
-    static function getUser(int $StudentID, string $pwd) {
-       
-        //QUERY, BIND, EXECUTE, RETURN
-        
-        try {
-            $selectOne = "SELECT * FROM PASSWORDS WHERE StudentID = :StudentID AND Password = :pwd;";
     
-            self::$db->query($selectOne);
-            self::$db->bind(':StudentID', $StudentID);
-            self::$db->bind(':pwd', $pwd);
-            self::$db->execute();
-            return self::$db->singleResult();
+  
+    // function to create user
+    static function createUser(User $user){
+        // make sure the strings being stored in the database are cleaned 
+        // trimmed, and changed to lowercase
+        $insertSQL = "INSERT INTO users VALUES(NULL, :first_name, :last_name, :username, :email, :color, :age, :password);";
+        // query
+        self::$db->query($insertSQL);
+        // bind
+        self::$db->bind(':first_name',$user->getFirstName());
+        self::$db->bind(':last_name',$user->getLastName());
+        self::$db->bind(':username', $user->getUserName());
+        self::$db->bind(':email',$user->getEmail());
+        self::$db->bind(':color',$user->getColor());
+        self::$db->bind(':age', $user->getAge());
+        self::$db->bind(':password', $user->getPassword());
 
-        } catch(PDOException $pe) {
-            $pe->getMessage();
-        }
-        
+        // execute
+        self::$db->execute();
+        // you may return the rowCount
+        return self::$db->rowCount();
+
+
     }
 
+    // get a user detail
+    static function getUser(string $userName)  {
+        // you know the drill
+        $sql = "SELECT * FROM users WHERE username=:user";
+        self::$db->query($sql);
+        self::$db->bind(":user",$userName);
+        self::$db->execute();
+        
+        return self::$db->singleResult();
+
+    }
+
+
+
+    // get multiple users detail
+    // It is not needed in our app, but hey.. more practice is better!
+    static function getUsers()  {
+        //you know the drill
+        $sql = "SELECT * FROM users;";
+        self::$db->query($sql);
+        self::$db->execute();
+        
+        return self::$db->getResultSet();
+    }
+    
+    
 }
-
-
-?>
