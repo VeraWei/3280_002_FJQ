@@ -6,7 +6,7 @@ class UserDAO   {
     private static $db;
     // create the init function to start the PDO agent
     static function init() {
-        self::$db = new PDOAgent("User");
+        self::$db = new PDOService("User");
     }
 
     //Get all the Users

@@ -22,4 +22,4 @@ Page::$title = "Detail";
 Page::header();
 
 // Finally I need to call the last function from the HTML
-LoginPage::footer();
+Page::footer();
