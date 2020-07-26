@@ -46,7 +46,7 @@ if (!empty($_POST))   {
     //Use header to send the user to the user profile page
     if (LoginManager::verifyLogin())    {
         // $u = UserDAO::getUser($_SESSION['loggedin']);
-        header('Location: detail.php');
+        header('Location: CourseRegistration.php');
         // it should locate to the next page;
     }
 }
