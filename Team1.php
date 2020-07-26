@@ -41,4 +41,6 @@ Route::handleRequestsNotDispatched();
 $var = "This is the second line added by Fernando";
 
 $var = 2;
+
+$var = "other";
 ?>
