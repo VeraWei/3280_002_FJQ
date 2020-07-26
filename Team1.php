@@ -36,4 +36,6 @@ Route::set("GET","test-page",function () {
 Route::handleRequestsNotDispatched();
 
 
+$var = "This is a line added by Fernando";
+
 ?>
