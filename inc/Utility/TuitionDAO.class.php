@@ -1,6 +1,14 @@
 <?php
 
-
+/*
++-------------+---------+------+-----+---------+-------+
+| Field       | Type    | Null | Key | Default | Extra |
++-------------+---------+------+-----+---------+-------+
+| StudentID   | int(11) | NO   | PRI | NULL    |       |
+| AmountOwing | int(11) | YES  |     | NULL    |       |
+| TuitionPaid | bit(1)  | YES  |     | NULL    |       |
++-------------+---------+------+-----+---------+-------+
+*/
 
     class TuitionDAO {
     
@@ -21,6 +29,11 @@
             return self::$db->resultSet();
         }
 
+        static function getTuition($StudentID) {
+            $sql = "SELECT * FROM Tuition WHERE StudentID = :StudentID ";
+            self::$db->execute_direct($sql,$StudentID);
+            return self::$db->singleResult();
+        }
 
 
     }
@@ -31,11 +44,9 @@
     //require("PDOService.class.php");
     require("inc/Utility/PDOService.class.php"); // although the require above also works.
     require("inc/Entity/Tuition.class.php");
+
     TuitionDAO::init();
-
-    //$sql = "SELECT * FROM Tuition WHERE StudentId = :id";
-    //all
-
+    /*
     $resultSet = TuitionDAO::getAll();
     foreach($resultSet as $tuition){
         if ($tuition.getTuitionPaid()) {
@@ -44,7 +55,8 @@
             echo "\n"."Tuition is not paid";
         }
     }
-        
+    */
+    var_dump(TuitionDAO::getTuition(300000001));    
     
 
 ?>

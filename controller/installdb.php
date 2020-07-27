@@ -1,10 +1,11 @@
 <?php 
 
+
 //Check if the environment variables are ok on the server side
-if (!(strpos(strtolower(getenv('Path')),"mysql")>0))
-{
-    InstallDBPage::$errors[] = "System Environment Variable <strong>Path</strong> does not seem to contain MySQL executable path. <br/> eg.: C:\wamp64\bin\mysql\mysql5.7.28\bin. <br/><br/>Consider adding it to Path environment variable, or you could run the the script manually.";
-}
+//if (!(strpos(strtolower(getenv('Path')),"mysql")>0))
+//{
+//    InstallDBPage::$errors[] = "System Environment Variable <strong>Path</strong> does not seem to contain MySQL executable path. <br/> eg.: C:\wamp64\bin\mysql\mysql5.7.28\bin. <br/><br/>Consider adding it to Path environment variable, or you could run the the script manually.";
+//}
 
 if (empty($_POST)) {
     InstallDBPage::renderContents();    
@@ -29,12 +30,32 @@ if (empty($_POST)) {
     }
 } 
 
-
+//Try to connect to database and get the installation directory of MySQL, so we can run database creation script.
+function getMySQLInstallationDirectory() {
+    
+    try {
+        $dsn='mysql:host=' .$_POST["db_host"]. ';port='.$_POST["db_port"];
+        $db = new PDO($dsn, $_POST['db_user'], $_POST['db_pass']);
+        $result = $db->query("select @@basedir as mysqlDir")->fetch()["mysqlDir"];
+    } catch (PDOException $pe)   {
+        $msg = $pe->getMessage();
+        InstallDBPage::$errors[] = $msg;
+        error_log($msg);
+        $result = "";
+    }
+    return $result;
+}
 
 function installDB(){
     $script_path = "data/sql/CourseReg.sql";
-    $command = "cmd /c \"".
-                    "mysql ".
+    $mysql_exe = getMySQLInstallationDirectory();
+    if ($mysql_exe!=""){
+        $mysql_exe .= "\\bin\\";
+    }
+    $mysql_exe .= "mysql";
+
+    $command = "cmd /c \"" .
+                    $mysql_exe . " " .
                     "--user={$_POST['db_user']} " .
                     "--password={$_POST['db_pass']} " .
                     "--host {$_POST['db_host']} " .
@@ -69,7 +90,7 @@ function writeFileDBConfig(){
         //read the entire string
         $str=file_get_contents($template_file);
 
-        //replace placeholders in in the file string - this is a VERY simple example
+        //replace placeholders in the file string
         $str=str_replace("#DB_HOST#",$_POST["db_host"] , $str);
         $str=str_replace("#DB_PORT#",$_POST["db_port"] , $str);
         $str=str_replace("#DB_USER#",$_POST["db_user"] , $str);
@@ -88,7 +109,5 @@ function writeFileDBConfig(){
     }
     
 }
-
-
 
 ?>
