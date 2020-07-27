@@ -2,6 +2,8 @@
 
 class RegistrationUser {
 
+
+
     //Properties
    private $CRN;
    private $Credits;
@@ -13,7 +15,8 @@ class RegistrationUser {
    private $Enrl;
    private $Rem;
    private $Wait;
-
+        
+    
     //Setters
     function setCRN($crn){
         $this->CRN = $crn;
@@ -51,6 +54,9 @@ class RegistrationUser {
     }
     function getCredits() : string {
         return $this->Credits;
+    }
+    function getTitle() : string {
+        return $this->Title;
     }
     function getSubject() : string {
         return $this->Subject;
