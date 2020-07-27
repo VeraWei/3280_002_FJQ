@@ -31,13 +31,13 @@ class RegistrationPage {
                 </tr>
                 <?php 
                     foreach($student as $course){
-                        echo "<li>".$student->getCRN() ."</li>";
-                        echo "<li>".$student->getSubject() ."</li>";
-                        echo "<li>".$student->getTitle() ."</li>";
-                        echo "<li>".$student->getInstructorID() ."</li>";
-                        echo "<li>".$student->getEnrl() ."</li>";
-                        echo "<li>".$student->getRem() ."</li>";
-                        echo "<li>".$student->getWait() ."</li>";
+                        echo "<li>".$RegistrationUser->getCRN() ."</li>";
+                        echo "<li>".$RegistrationUser->getSubject() ."</li>";
+                        echo "<li>".$RegistrationUser->getTitle() ."</li>";
+                        echo "<li>".$RegistrationUser->getInstructorID() ."</li>";
+                        echo "<li>".$RegistrationUser->getEnrl() ."</li>";
+                        echo "<li>".$stuRegistrationUserdent->getRem() ."</li>";
+                        echo "<li>".$RegistrationUser->getWait() ."</li>";
                     }
                 ?>
             </thead>
