@@ -32,17 +32,17 @@ class RegistrationDAO  {
     
     // GET = READ = SELECT
     // This is for a single result.... when do I need it huh?
-    static function getCourse(int $StudentID)  {
-        $selectSingle = "SELECT * FROM COURSES JOIN STUDENTS_COURSES
+    static function getCourses(int $StudentID)  {
+        $selectCourses = "SELECT * FROM COURSES JOIN STUDENTS_COURSES
         ON COURSES.CRN = STUDENTS_COURSES.CRN JOIN STUDENTS
         ON STUDENTS_COURSES.StudentID = STUDENTS.StudentID
         WHERE STUDENTS.StudentID = :studentid";
         
         //QUERY, BIND, EXECUTE, RETURN
-        self::$db->query($selectSingle);
+        self::$db->query($selectCourses);
         self::$db->bind(':studentid', $StudentID);
         self::$db->execute();
-        return self::$db->singleResult();
+        return self::$db->resultSet();
 
     }
 
