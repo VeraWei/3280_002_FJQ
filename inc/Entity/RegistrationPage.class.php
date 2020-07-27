@@ -30,15 +30,18 @@ class RegistrationPage {
 
                 </tr>
                 <?php 
+                foreach($RegistrationUser as $courses)
+                {
                     echo "<tr>";
-                        echo "<td>".$RegistrationUser->getCRN() ."</td>";
-                        echo "<td>".$RegistrationUser->getSubject() ."</td>";
-                        echo "<td>".$RegistrationUser->getTitle() ."</td>";
-                        echo "<td>".$RegistrationUser->getInstructorID() ."</td>";
-                        echo "<td>".$RegistrationUser->getEnrl() ."</td>";
-                        echo "<td>".$RegistrationUser->getRem() ."</td>";
-                        echo "<td>".$RegistrationUser->getWait() ."</td>";
+                        echo "<td>".$courses->getCRN() ."</td>";
+                        echo "<td>".$courses->getSubject() ."</td>";
+                        echo "<td>".$courses->getTitle() ."</td>";
+                        echo "<td>".$courses->getInstructorID() ."</td>";
+                        echo "<td>".$courses->getEnrl() ."</td>";
+                        echo "<td>".$courses->getRem() ."</td>";
+                        echo "<td>".$courses->getWait() ."</td>";
                     echo "</tr>";
+                }
                     
                 ?>
             </thead>

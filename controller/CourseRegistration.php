@@ -12,7 +12,7 @@ require_once("../inc/Entity/RegistrationUser.class.php");
 
 RegistrationDAO::initialize('RegistrationUser');
 //if(isset($_POST['username'])){
-$RegistrationUser = RegistrationDAO::getCourse(/*$_POST['username']*/ 300000000);
+$RegistrationUser = RegistrationDAO::getCourses(/*$_POST['username']*/ 300000000);
     var_dump($RegistrationUser);
 //}
 
