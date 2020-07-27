@@ -31,7 +31,7 @@ if (empty($_POST)) {
 
 
 function installDB(){
-    $script_path = "data/CourseReg.sql";
+    $script_path = "data/sql/CourseReg.sql";
     $command = "cmd /c \"".
                     "mysql ".
                     "--user={$_POST['db_user']} " .
@@ -59,7 +59,7 @@ function installDB(){
 function writeFileDBConfig(){
    try{
         
-        $template_file = "data/dbconfig_template.txt"; 
+        $template_file = "data/templates/dbconfig_template.txt"; 
         $dbconfig_include_file = "inc/dbconfig.inc.php";
         $fh = fopen($dbconfig_include_file, "a"); //append mode
         //open file for exclusive write

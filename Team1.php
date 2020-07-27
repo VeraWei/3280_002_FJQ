@@ -10,15 +10,15 @@
  */
 // require the config
 require_once('inc/config.inc.php');
-//require_once("inc/html_form.inc.php");
-require_once("inc/entity/RouteTestPage.class.php"); //Actually should be the SuperPage here
+require_once("inc/entity/SuperPage.class.php");
+require_once("inc/entity/RouteTestPage.class.php");
 require_once("inc/entity/InstallDBPage.class.php");
 // require all the entities
-require_once("inc/Login/Login.class.php");
-require_once("inc/Login/LoginPage.class.php");
+//require_once("inc/Login/Login.class.php");
+//require_once("inc/Login/LoginPage.class.php");
 
 // require all the utilities: PDO and DAO(s)
-require_once("inc/Login/LoginDAO.class.php");
+//require_once("inc/Login/LoginDAO.class.php");
 require_once("inc/Utility/PDOService.class.php");
 
 require_once("inc/utility/Route.class.php");
@@ -41,10 +41,12 @@ require_once($inc);
 // Page: Team1.php
 // Method GET or POST, route = "", then execute the script login.php
 Route::set("GET","",function () {
-    require('login.php');
+    //require('controller/login.php');
+    header("Location:" . 'controller/login.php'); //redirect - client-side
 });
 Route::set("POST","",function () {
-    require('login.php');
+    //require('controller/login.php');
+    header("Location:" . 'controller/login.php'); //redirect - client-side
 });
 
 // Page: Team1.php?route=test-page
