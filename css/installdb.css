@@ -1,0 +1,110 @@
+@charset "UTF-8";
+/**
+* Fernando Viana Maia - 300320728
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 20px;
+  color: rgb(31, 34, 33);
+  background: #4259c0;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#dbsettings input[type="text"],
+#dbsettings input[type="password"],
+#dbsettings button[type="submit"] {
+  font: 400 12px/16px Helvetica, Arial, sans-serif;
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#dbsettings {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 50px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+h1 {
+    display: block;
+    font-weight: 300;
+    margin: 10px;
+}
+  
+
+#dbsettings h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#dbsettings h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#dbsettings input[type="text"]:hover,
+#dbsettings input[type="password"]:hover,
+#dbsettings button[type="submit"]:hover {
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#dbsettings button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #3d3696;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#dbsettings button[type="submit"]:hover {
+  background: #78b9df;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#dbsettings button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#dbsettings input:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+.warning, .error{
+    background: #9ed1e4c9;
+    padding: 25px;
+}

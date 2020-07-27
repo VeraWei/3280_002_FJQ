@@ -9,45 +9,12 @@ class SuperPage{
     public static $errors = array();
 
     // Render the contents of this page.
-    // Invokes:
-    //    onPreHTTP()
-    //    onPage()
-    //    onPostHTTP()
     static function renderContents() 
     { 
-        //Uses late binding to get the implementation of subclasses
-        if (static::onPreHTTP()) {
-            if ( !(static::onPage() && static::onPostHTTP()) ) {
-                //some error may have occurred 
-                static::onErrorMessage();
-            }
-        }
-    }
-
-    // Ensure that the user has the required privileges for the application.
-    // This is the method for page redirection, not intended to write out html.
-    // Returning FALSE from this method prevents onPage() and onPostHTTP() execution.
-    static function onPreHTTP() {
-
-	    //if (!static::checkPrivileges()) {
-		// %zenPageError = $$$ERROR($$$AccessDenied)
-		// %zenStatsTime = $zh
-        // %response.Status = "403 Forbidden"
-        //}
-        return TRUE;
-    }
-
-
-    static function onPage() {
+        //Use late binding to get the implementation of subclasses
         static::header();
         static::body();
         static::footer();
-        return empty(static::$errors);
-    }
-
-    static function onPostHTTP() {
-        //remove some data from the session for example.
-        return TRUE;
     }
 
     static function header()
@@ -66,11 +33,12 @@ class SuperPage{
             <header>
                 <h1><?php echo static::$title; ?></h1>
             </header>
+            <?php static::onErrorMessage(); ?>
             <article class="container">
     <?php }
 
     static function body() {
-        echo "onPage not implemented";
+        echo "onPage not implemented in the subclass";
     }
 
     static function footer()
@@ -82,16 +50,16 @@ class SuperPage{
 
 
     // This function displays the list of error messages
-    function onErrorMessage()  
+    static function onErrorMessage()  
     { 
-        if (is_empty(self::$errors)) return;
+        if (empty(self::$errors)) return; //nothing to show
         //
         ?>
         <div class="error">
-            Please fix the following errors:  
+            Messages:  
             <ul>
                 <?php foreach (self::$errors as $errorDescription){
-                echo "<li> - $errorDescription </li>";
+                echo "<li> $errorDescription </li>";
                 } ?>
             </ul>
         </div>    
