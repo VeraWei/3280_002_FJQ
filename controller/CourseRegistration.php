@@ -1,5 +1,7 @@
 <?php 
 require_once("../inc/config.inc.php");
+require_once("../inc/dbconfig.inc.php");
+
 require_once("../inc/Utility/LoginManager.class.php");
 require_once("../inc/Utility/PDOService.class.php");
 require_once("../inc/Utility/UserDAO.class.php");

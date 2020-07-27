@@ -4,6 +4,7 @@
 
 // require the config
 require_once("../inc/config.inc.php");
+require_once("../inc/dbconfig.inc.php");
 
 // require all the entities
 require_once("../inc/Entity/User.class.php");
