@@ -17,6 +17,7 @@ body {
   color: rgb(31, 34, 33);
   /*background: #4259c0;*/
   background-image: url("../data/assets/bg.jpg");
+  background-size: cover;
 }
 
 .container {

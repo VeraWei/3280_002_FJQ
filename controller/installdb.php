@@ -18,6 +18,7 @@ if (empty($_POST)) {
     if (isset($_POST["submitManual"]))
     {
         writeFileDBConfig();
+        header("Location:".$_SERVER["REQUEST_URI"]);
     }
 
     if (!empty(InstallDBPage::$errors)) { //fail at running the scipt or creating "inc/dbconfig.inc.php" file.
