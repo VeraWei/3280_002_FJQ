@@ -471,3 +471,15 @@ Stack trace:
 [27-Jul-2020 02:29:33 UTC] ERROR 1045 (28000): Access denied for user 'rooti'@'localhost' (using password: NO)
 [27-Jul-2020 02:29:51 UTC] mysql: [Warning] Using a password on the command line interface can be insecure.
 [27-Jul-2020 02:29:51 UTC] ERROR 1452 (23000) at line 89: Cannot add or update a child row: a foreign key constraint fails (`registrar`.`passwords`, CONSTRAINT `passwords_ibfk_1` FOREIGN KEY (`StudentID`) REFERENCES `students` (`StudentID`) ON DELETE NO ACTION ON UPDATE CASCADE)
+[27-Jul-2020 06:27:45 UTC] PHP Notice:  Undefined variable: route in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php on line 61
+[27-Jul-2020 06:27:45 UTC] PHP Stack trace:
+[27-Jul-2020 06:27:45 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:0
+[27-Jul-2020 06:27:45 UTC] PHP   2. Route::set() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:46
+[27-Jul-2020 06:27:45 UTC] PHP   3. Route::checkPrivileges() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php:19
+[27-Jul-2020 06:36:50 UTC] 'mysql' is not recognized as an internal or external command,
+[27-Jul-2020 06:36:50 UTC] operable program or batch file.
+[27-Jul-2020 06:40:31 UTC] PHP Notice:  Undefined variable: route in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php on line 61
+[27-Jul-2020 06:40:31 UTC] PHP Stack trace:
+[27-Jul-2020 06:40:31 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:0
+[27-Jul-2020 06:40:31 UTC] PHP   2. Route::set() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:46
+[27-Jul-2020 06:40:31 UTC] PHP   3. Route::checkPrivileges() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php:19

@@ -15,7 +15,8 @@ body {
   font-size: 12px;
   line-height: 20px;
   color: rgb(31, 34, 33);
-  background: #4259c0;
+  /*background: #4259c0;*/
+  background-image: url("../data/assets/bg.jpg");
 }
 
 .container {

@@ -13,7 +13,7 @@ class LoginPage
         <head>
             <title></title>
             <meta charset="utf-8">
-            <meta name="author" content="Bambang">
+            <meta name="author" content="Team1">
             <title><?php echo self::$title; ?></title>
             <link href="../css/login.css" rel="stylesheet">
         </head>

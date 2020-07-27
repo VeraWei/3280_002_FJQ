@@ -5,7 +5,8 @@ html{
     background-color: snow;
 }
 body{
-    background-color: lightblue;
+    background-image: url("../data/assets/bg.jpg");
+    /*background-color: lightblue;*/
     border: 1px solid black;
     display: table;
     width: 90%;

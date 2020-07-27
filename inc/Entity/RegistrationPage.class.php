@@ -8,13 +8,13 @@ class RegistrationPage {
                 <title></title>
                 <meta charset="utf-8">
                 <title></title>   
-                <link rel="stylesheet" href="css/styles.css" />
+                <link rel="stylesheet" href="../css/styles.css" />
             </head>
 
             <body>
             <h1>Course Registration Form</h1>
         <?php }
-       static function printTable($student) {
+       static function printTable($RegistrationUser) {
             ?>
             <section class="main">
             <table>
@@ -30,15 +30,16 @@ class RegistrationPage {
 
                 </tr>
                 <?php 
-                    foreach($student as $course){
-                        echo "<li>".$RegistrationUser->getCRN() ."</li>";
-                        echo "<li>".$RegistrationUser->getSubject() ."</li>";
-                        echo "<li>".$RegistrationUser->getTitle() ."</li>";
-                        echo "<li>".$RegistrationUser->getInstructorID() ."</li>";
-                        echo "<li>".$RegistrationUser->getEnrl() ."</li>";
-                        echo "<li>".$stuRegistrationUserdent->getRem() ."</li>";
-                        echo "<li>".$RegistrationUser->getWait() ."</li>";
-                    }
+                    echo "<tr>";
+                        echo "<td>".$RegistrationUser->getCRN() ."</td>";
+                        echo "<td>".$RegistrationUser->getSubject() ."</td>";
+                        echo "<td>".$RegistrationUser->getTitle() ."</td>";
+                        echo "<td>".$RegistrationUser->getInstructorID() ."</td>";
+                        echo "<td>".$RegistrationUser->getEnrl() ."</td>";
+                        echo "<td>".$RegistrationUser->getRem() ."</td>";
+                        echo "<td>".$RegistrationUser->getWait() ."</td>";
+                    echo "</tr>";
+                    
                 ?>
             </thead>
             </table>
