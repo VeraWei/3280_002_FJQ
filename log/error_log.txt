@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [18-Jul-2020 17:23:56 America/Vancouver] PHP Fatal error:  Uncaught Error: Class 'PDOService' not found in /Users/vera/projects/courses/3280/3280_002_FJQ/inc/Login/LoginDAO.class.php:13
 Stack trace:
 #0 /Users/vera/projects/courses/3280/3280_002_FJQ/login.php(16): LoginDAO::initialize('Login')
@@ -493,3 +494,6 @@ Stack trace:
 [28-Jul-2020 05:18:09 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:0
 [28-Jul-2020 05:18:09 UTC] PHP   2. Route::set() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:46
 [28-Jul-2020 05:18:09 UTC] PHP   3. Route::checkPrivileges() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php:19
+=======
+[28-Jul-2020 07:35:52 UTC] Route invokedTeam1.php||GET
+>>>>>>> 8f5c7edeef25b4315f15b48554ee6d0679ee7edf

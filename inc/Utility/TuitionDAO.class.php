@@ -39,13 +39,13 @@
     }
 
 
-    require("inc/config.inc.php");
-    require("inc/dbconfig.inc.php");
+    //require("inc/config.inc.php");
+    //require("inc/dbconfig.inc.php");
     //require("PDOService.class.php");
-    require("inc/Utility/PDOService.class.php"); // although the require above also works.
-    require("inc/Entity/Tuition.class.php");
+    //require("inc/Utility/PDOService.class.php"); // although the require above also works.
+    //require("inc/Entity/Tuition.class.php");
 
-    TuitionDAO::init();
+    //TuitionDAO::init();
     /*
     $resultSet = TuitionDAO::getAll();
     foreach($resultSet as $tuition){
@@ -56,7 +56,7 @@
         }
     }
     */
-    var_dump(TuitionDAO::getTuition(300000001));    
+    //var_dump(TuitionDAO::getTuition(300000001));    
     
 
 ?>

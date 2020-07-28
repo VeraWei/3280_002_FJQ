@@ -1,0 +1,19 @@
+RewriteEngine On
+
+# if it is not an existing file
+#RewriteCond %{REQUEST_FILENAME} !-f
+
+# if it is not an existing directory
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# if it is not an image or csss
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+
+#References:
+# https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_qsa
+# https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_l
+#
+# https://httpd.apache.org/docs/2.4/rewrite/intro.html#regex
+#
+RewriteRule ^((([^/]+)/?)*)? Team1.php?route=$1 [L,QSA]
+
