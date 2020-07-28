@@ -47,7 +47,7 @@ class InstallDBController {
                         // 2>&1 to get the messages    
         //run database script on the server
         exec( $command , $output, $return_var );
-        if ($return_var==0) { //success creating database
+        if ($return_var==127 || $return_var==0) { //success creating database
             self::writeFileDBConfig();
         } else { //fail creating database
             foreach ($output as $outputLine) {

@@ -24,7 +24,7 @@ if (!empty($_POST))   {
         
         //Set the user to logged in
         $_SESSION['loggedin'] = $authUser->getStudentID();
-        head("Location: CourseRegistration.php");
+        header("Location: CourseRegistration.php");
         
     }
         
