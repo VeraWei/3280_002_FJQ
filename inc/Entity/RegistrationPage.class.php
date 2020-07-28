@@ -23,10 +23,7 @@ class RegistrationPage {
                     <th>CRN</th> <!-- ReservationID -->
                     <th>Subject</th>
                     <th>Title</th>
-                    <th>Instructor</th>
-                    <th>Enroled</th>
-                    <th>Remaining</th>
-                    <th>Wait List</ht>
+                    <th>Registered on:</ht>
 
                 </tr>
                 <?php 
@@ -36,10 +33,7 @@ class RegistrationPage {
                         echo "<td>".$courses->getCRN() ."</td>";
                         echo "<td>".$courses->getSubject() ."</td>";
                         echo "<td>".$courses->getTitle() ."</td>";
-                        echo "<td>".$courses->getInstructorID() ."</td>";
-                        echo "<td>".$courses->getEnrl() ."</td>";
-                        echo "<td>".$courses->getRem() ."</td>";
-                        echo "<td>".$courses->getWait() ."</td>";
+                        echo "<td>".$courses->getRegistrationDate() ."</td>";
                     echo "</tr>";
                 }
                     
@@ -49,26 +43,64 @@ class RegistrationPage {
             </section>
             <?php 
                 }
-            static function PrintForm() {
+            static function PrintForm($CourseList) {
             ?>
             <section class="form1">
-            <form>
-                   
+            <form  method="POST">
                 <select name="courses" id="courses">
-                    <option value="1">1110</option>
-                    <option value="2">1280</option>
-                    <option value="3">2200</option>
-                    <option value="4">3300</option>
+                    <option disabled selected>Choose your course</option>
+                    <?php
+                foreach($CourseList as $CourseID)
+                    echo "<option value='".$CourseID->getSubject()."-".$CourseID->getCRN()."'>".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
+                    ?>
                 </select>
                 <br>
-                <input type="submit" name="submit">
+                <br>
+                <br>
+                <input type="submit" name="action" value="Show Info"/> <input type="submit" name="action" value="Register"/>
                     
             </form>
-            </section>
+
             <?php
             }
+
+            static function PrintCourseInfo($CourseInfo) {
+                ?>
+            <table>
+             <thead style="background: rgba(0, 0, 0, 0)">
+                <tr>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+                    <th>Title</th>
+
+
+                </tr>
+                <?php 
+                foreach($CourseInfo as $course)
+                {
+                    echo "<tr>";
+                        echo "<td>".$course->getTitle() ."</td>";
+                        echo "<td>".$course->getTitle() ."</td>";
+                        echo "<td>".$course->getTitle() ."</td>";
+                        echo "<td>".$course->getTitle() ."</td>";
+                        echo "<td>".$course->getTitle() ."</td>";
+                        echo "<td>".$course->getTitle() ."</td>";
+                    echo "</tr>";
+                }
+                    
+                ?>
+            </thead>
+            </table>
+    
+                <?php
+                }
+
             static function PrintFooter(){
                 ?>
+                        </section>
                     </body>
                 </html>
                 <?php

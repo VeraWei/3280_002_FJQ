@@ -13,19 +13,15 @@ class RegistrationDAO  {
 
     // One of the functionality for the class abstracted by this DAO: CREATE
     // Remember that Create means INSERT
-    static function createReservation(Reservation $newReservation) {
+    static function addRegistration(RegistrationUser $RegistrationUser, $userID) {
 
-        $sqlInsert = "INSERT INTO reservation (Name, Email, FacilityID, ReservationDate, Length)
-        VALUES (:name, :email, :facilityid, :reservationdate, :length);";
+        $sqlInsert = "INSERT INTO students_courses VALUES(:CRN, :StudentID, :RegistrationDate);";
 
         // QUERY BIND EXECUTE RETURN
         self::$db->query($sqlInsert);
-        self::$db->bind(':name',$newReservation->getName());
-        self::$db->bind(':email',$newReservation->getEmail());
-        self::$db->bind(':facilityid', $newReservation->getFacilityID());
-        self::$db->bind(':reservationdate',$newReservation->getReservationDate());
-        self::$db->bind(':length',$newReservation->getLength());
-
+        self::$db->bind(':CRN',$RegistrationUser->getCRN());
+        self::$db->bind(':StudentID', $userID);
+        self::$db->bind(':RegistrationDate', date("Y-m-d"));
         self::$db->execute();
         return self::$db->lastInsertedId();
     }
@@ -46,41 +42,13 @@ class RegistrationDAO  {
 
     }
 
-    // GET = READ = SELECT ALLL
-    // This is to get all reservations 
-    static function getReservations() {
-
-        // I don't need any parameter here, do I need to bind?
-        //Prepare the Query
-        $selectAll = "SELECT * FROM reservation;";
-        self::$db->query($selectAll);
-        //execute the query
+    static function getCourseList()  {
+        $selectCourses = "SELECT Subject, CRN FROM COURSES;";
+        
+        //QUERY, BIND, EXECUTE, RETURN
+        self::$db->query($selectCourses);
         self::$db->execute();
-        //Return results
         return self::$db->resultSet();
-    }
-
-
-    
-    // UPDATE means update
-    static function updateReservation (Reservation $ReservationToUpdate) {
-        $updateQuery = "UPDATE reservation
-        SET Name = :name,
-            ReservationDate = :date,
-            Length = :length,
-            FacilityID = :facilityid
-            WHERE ReservationID = :reservationid;";
-        //QUERY, BIND, EXECUTE
-        self::$db->query($updateQuery);
-        self::$db->bind(':name', $_POST['name']);
-        self::$db->bind(':date', $_POST['ReservationDate']);
-        self::$db->bind(':length', $_POST['length']);
-        self::$db->bind(':facilityid', $_POST['facilityid']);
-        self::$db->bind(':reservationid', $ReservationToUpdate->getReservationID());
-        self::$db->execute();
-        // Return the rowCount
-        return self::$db->rowCount();
-
     }
     
     // DELETE
@@ -108,17 +76,16 @@ class RegistrationDAO  {
         
     }
 
-    // WE NEED TO JOIN HERE
-    // Make sure to select from both tables joined at the correct column
-    static function getReservationList() {
-        $query = "SELECT *  FROM reservation JOIN facility
-        ON reservation.FacilityID = facility.FacilityID;";
-        //Prepare the Query
+    static function getCourseInfo(RegistrationUser $CourseID) {
+        $query = "SELECT *  FROM courses WHERE Subject = :subject AND CRN = :crn;";
+       
+        
         self::$db->query($query);
-        //execute the query
+        self::$db->bind(':subject', $CourseID->getSubject());
+        self::$db->bind(':crn', $CourseID->getCRN());
         self::$db->execute();
-        //Return row results
         return self::$db->resultSet();
+        
     }
 
 }

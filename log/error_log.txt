@@ -483,3 +483,13 @@ Stack trace:
 [27-Jul-2020 06:40:31 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:0
 [27-Jul-2020 06:40:31 UTC] PHP   2. Route::set() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:46
 [27-Jul-2020 06:40:31 UTC] PHP   3. Route::checkPrivileges() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php:19
+[27-Jul-2020 06:59:18 UTC] PHP Notice:  Undefined variable: route in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php on line 61
+[27-Jul-2020 06:59:18 UTC] PHP Stack trace:
+[27-Jul-2020 06:59:18 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:0
+[27-Jul-2020 06:59:18 UTC] PHP   2. Route::set() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:46
+[27-Jul-2020 06:59:18 UTC] PHP   3. Route::checkPrivileges() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php:19
+[28-Jul-2020 05:18:09 UTC] PHP Notice:  Undefined variable: route in C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php on line 61
+[28-Jul-2020 05:18:09 UTC] PHP Stack trace:
+[28-Jul-2020 05:18:09 UTC] PHP   1. {main}() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:0
+[28-Jul-2020 05:18:09 UTC] PHP   2. Route::set() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\Team1.php:46
+[28-Jul-2020 05:18:09 UTC] PHP   3. Route::checkPrivileges() C:\Users\gilad\Desktop\CSIS3280GroupProject\3280_002_FJQ\inc\Utility\Route.class.php:19

@@ -15,6 +15,7 @@ class RegistrationUser {
    private $Enrl;
    private $Rem;
    private $Wait;
+   private $RegistrationDate;
         
     
     //Setters
@@ -48,6 +49,9 @@ class RegistrationUser {
     function setWait($wait){
         $this->Wait = $wait;
     }
+    function setRegistrationDate($registrationdate) {
+        $this->RegistrationDate = $registrationdate;
+    }
     //Getters
     function getCRN() : int {
         return $this->CRN;
@@ -78,6 +82,9 @@ class RegistrationUser {
     }
     function getWait(){
         return $this->Wait;
+    }
+    function getRegistrationDate(){
+        return $this->RegistrationDate;
     }
 
     //Verify the password
