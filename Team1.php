@@ -40,7 +40,7 @@ $inc = 'inc/dbconfig.inc.php';
 if (!file_exists($inc)) {
     //Seems like the server is not ready for this application.
     //take the user to the Database Setup Page
-    //Routes available for this app while file 'inc/dbconfig.inc.php' is missing. 
+    //Routes available for this app while file 'inc/dbconfig.inc.php' is missing: 
     Route::dispatchRequest("Team1.php",function () { InstallDBController::onGet() ; }, "GET");
     Route::dispatchRequest("Team1.php",function () { InstallDBController::onPost() ; }, "POST");
     Route::onRequestNotDispatched();

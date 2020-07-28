@@ -23,7 +23,8 @@ class InstallDBController {
         if (!empty(InstallDBPage::$errors)) { //fail at running either, db scipt or creating "inc/dbconfig.inc.php" file.
             InstallDBPage::renderContents();
         } else {
-            header("Location:install-db-is-ok");
+            //header("Location:install-db-is-ok");
+            header("Location:Team1.php");
         }
     }
 
