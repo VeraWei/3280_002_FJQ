@@ -12,7 +12,6 @@ class InstallDBPage extends SuperPage
     static function body()
     { ?>
         <div class="container">  
-            
             <form id="dbsettings" action="" method="post">
                 <h3><?php echo static::$title; ?></h3>
                 
