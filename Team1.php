@@ -15,14 +15,14 @@ require_once('inc/config.inc.php');
 require_once("inc/entity/Course.class.php");
 require_once("inc/entity/SuperPage.class.php");
 require_once("inc/entity/InstallDBPage.class.php");
-require_once("inc/entity/LoginPage.class.php");
+require_once("inc/entity/LogPage.class.php");
 require_once("inc/entity/Page.class.php");
 require_once("inc/entity/RegistrationPage.class.php");
 require_once("inc/entity/RegistrationUser.class.php");
 require_once("inc/entity/RouteTestPage.class.php");
 require_once("inc/entity/Tuition.class.php");
 require_once("inc/entity/User.class.php");
-require_once("inc/entity/Instructor.class.php");
+// require_once("inc/entity/Instructor.class.php");
 
 //Uility classes
 require_once("inc/utility/LoginManager.class.php");
@@ -54,9 +54,14 @@ require_once($inc);
 **/
 
 //Routes to Login
-$loginFunction = function () { require_once("controller/login.php"); } ; //anonymous function for invoking login controller.
+$loginFunction = function () { require_once("controller/Login.php"); } ; //anonymous function for invoking login controller.
 Route::dispatchRequest("Team1.php",$loginFunction);
-Route::dispatchRequest("controller/login.php", $loginFunction);
+Route::dispatchRequest("controller/Login.php", $loginFunction);
+
+//Routes to Login Out
+$logOutFunction = function () { require_once("controller/LogOut.php"); } ; //anonymous function for invoking login out controller.
+Route::dispatchRequest("controller/LogOut.php",$logOutFunction);
+Route::dispatchRequest("LogOut.php", $logOutFunction);
 
 // Main page
 $courseRegistrationFunction = function () { require_once("controller/CourseRegistration.php"); };

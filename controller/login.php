@@ -1,9 +1,9 @@
 <?php
 
 // Display the header (remeber to set the title/heading)
-LoginPage::$title = "User Login";
+LogPage::$title = "User Login";
 // Call the HTML header
-LoginPage::header();
+LogPage::header();
 
 if (!empty($_POST))   {
     
@@ -24,7 +24,6 @@ if (!empty($_POST))   {
         
         //Set the user to logged in
         $_SESSION['loggedin'] = $authUser->getStudentID();
-        header("Location: CourseRegistration.php");
         
     }
         
@@ -33,12 +32,14 @@ if (!empty($_POST))   {
         // $u = UserDAO::getUser($_SESSION['loggedin']);
         header('Location: CourseRegistration.php');
         // it should locate to the next page;
+    } else {
+        $error = "Password Error!";
     }
 }
     
 // Show login form of Login page
-LoginPage::loginDescription();
-LoginPage::loginForm();
+LogPage::loginDescription($error);
+LogPage::loginForm();
 
 // Finally I need to call the last function from the HTML
-LoginPage::footer();
+LogPage::footer();

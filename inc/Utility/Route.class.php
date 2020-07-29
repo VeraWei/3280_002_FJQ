@@ -9,7 +9,7 @@ class Route {
     private static $validRoutes = array();
 
     // these routes are not validated against $_SESSION['loggedin']. So requests from not logged users to these rotes will be accepted and dispatched.
-    private static $exceptionRoutes =["","Team1.php","controller/login.php"];
+    private static $exceptionRoutes =["","Team1.php","controller/Login.php"];
 
     // 1 $route - Route: whatever comes in the URL after web application path. 
     //      Ex: http://server/appVirtualDirectory/Team1.php where "Team1.php" is the $_GET["route"] , or;

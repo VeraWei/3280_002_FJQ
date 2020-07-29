@@ -1,12 +1,13 @@
+header {
+    position: relative;
+    z-index: 1;
+}
 .container {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-image: url("../data/assets/bg.jpg");
     background-size: cover;
 }
@@ -19,6 +20,7 @@
 }
 
 .login-container {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,4 +87,30 @@
     padding: 0 15px;
     font-size: 14px;
     border-radius: 4px;
+}
+
+.logout {
+    width: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logout thead {
+    text-align: left;
+}
+
+.back {
+    width: 74%;
+    margin-top: 20px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.back::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
 }
