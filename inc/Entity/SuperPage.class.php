@@ -9,6 +9,8 @@ class SuperPage{
 
     public static $errors = array();
 
+    public static $messages = array();
+
     // Render the contents of this page.
     static function renderContents() 
     { 
@@ -50,21 +52,37 @@ class SuperPage{
     <?php }
 
 
-    // This function displays the list of error messages
-    static function onErrorMessage()  
+    // This function displays the list of messages
+    static function onMessage()  
     { 
-        if (empty(self::$errors)) return; //nothing to show
-        //
-        ?>
-        <div class="error">
-            Messages:  
-            <ul>
-                <?php foreach (self::$errors as $errorDescription){
-                echo "<li> $errorDescription </li>";
-                } ?>
-            </ul>
-        </div>    
-    <?php }
+        if (!empty(self::$errors)) { ?>
+            <div class="error">
+                Messages:  
+                <ul>
+                    <?php 
+                    foreach (self::$errors as $errorDescription){
+                        echo "<li> $errorDescription </li>";
+                    } 
+                    ?>
+                </ul>
+            </div>    
+        <?php }
+       if (!empty(self::$messages)) { ?>
+            <div class="message">
+                Messages:  
+                <ul>
+                    <?php 
+                    foreach (self::$messages as $message){
+                        echo "<li> $message </li>";
+                    } 
+                    ?>
+                </ul>
+            </div>    
+        <?php }
+
+    }
+
+        
     
 }
 

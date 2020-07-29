@@ -72,7 +72,7 @@ class PDOService {
             $propertyName = $matches[1][0];
             if (gettype($parameters)=='object') { //it is an object instance, then try to use getter method to bind
                 //getter method
-                $getterMethodName = "get" . ucfirst($propertyName); // ucfirst() converts the first character of a string to Uppercase. 
+                $getterMethodName = "get" . ucfirst($propertyName); // ucfirst() converts the first character of a string to Uppercase. Usually this is the recommended convention name for getter methods.
                 $reflectionGetPropertyMethod = new ReflectionMethod($this->_className, $getterMethodName);
                 //bind to the value of object's getter method
                 $this->bind(':'.$propertyName,$reflectionGetPropertyMethod->invoke($parameters));
