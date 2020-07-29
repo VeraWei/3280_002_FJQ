@@ -15,6 +15,31 @@ class RegistrationDAO  {
     // Remember that Create means INSERT
     static function addRegistration(RegistrationUser $RegistrationUser, $userID) {
 
+        $Enrl = $RegistrationUser->getEnrl();
+        $Rem = $RegistrationUser->getRem();
+        $Wait = $RegistrationUser->getWait();
+        $CRN = $RegistrationUser->getCourseID();
+        $Subject = $RegistrationUser->getSubject();
+
+        if($Rem < 0)
+            $Wait++;
+        else {
+            $Enrl++;
+            $Rem--;
+        }
+
+        $sqlUpdate = "UPDATE courses 
+        SET Enrl = :enrl, Rem = :Rem, Wait = :Wait 
+        WHERE CRN = :crn && Subject = :Subject;";
+        self::$db->query($sqlInsert);
+        self::$db->bind(':ernl', $Enrl);
+        self::$db->bind(':Rem', $Rem);
+        self::$db->bind(':Wait', $Wait);
+        self::$db->bind(':crn', $CRN);
+        self::$db->bind(':Subject', $Subject);
+        self::$db->execute();
+
+
         $sqlInsert = "INSERT INTO students_courses VALUES(:CRN, :StudentID, :RegistrationDate);";
 
         // QUERY BIND EXECUTE RETURN
@@ -78,14 +103,21 @@ class RegistrationDAO  {
 
     static function getCourseInfo(RegistrationUser $CourseID) {
         $query = "SELECT *  FROM courses WHERE Subject = :subject AND CRN = :crn;";
-       
-        
         self::$db->query($query);
         self::$db->bind(':subject', $CourseID->getSubject());
         self::$db->bind(':crn', $CourseID->getCRN());
         self::$db->execute();
-        return self::$db->resultSet();
+        return self::$db->singleResult();
         
+    }
+
+    static function getInstructorInfo(int $instructorID){
+        $query = "SELECT * FROM instructors WHERE InstructorID = :instructorID;";
+
+        self::$db->query($query);
+        self::$db->bind(':instructorID', $instructorID);
+        self::$db->execute();
+        return self::$db->singleResult();
     }
 
 }

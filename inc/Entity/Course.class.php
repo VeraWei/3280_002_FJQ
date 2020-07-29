@@ -60,7 +60,7 @@ private $Wait;
  function getPreReq(){
      return $this->PreReq;
  }
- function getDuratoin(){
+ function getDuration(){
      return $this->Duration;
  }
  function getEnrl(){

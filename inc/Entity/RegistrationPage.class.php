@@ -64,32 +64,34 @@ class RegistrationPage {
             <?php
             }
 
-            static function PrintCourseInfo($CourseInfo) {
+            static function PrintCourseInfo($CourseInfo, $Instructor) {
                 ?>
             <table>
              <thead style="background: rgba(0, 0, 0, 0)">
                 <tr>
                     <th>Title</th>
-                    <th>Title</th>
-                    <th>Title</th>
-                    <th>Title</th>
-                    <th>Title</th>
-                    <th>Title</th>
+                    <th>Credits</th>
+                    <th>PreReq</th>
+                    <th>Duration</th>
+                    <th>Enrl</th>
+                    <th>Rem</th>
+                    <th>Wait</th>
 
 
                 </tr>
                 <?php 
-                foreach($CourseInfo as $course)
-                {
+                /*foreach($CourseInfo as $course)
+                {*/
                     echo "<tr>";
-                        echo "<td>".$course->getTitle() ."</td>";
-                        echo "<td>".$course->getTitle() ."</td>";
-                        echo "<td>".$course->getTitle() ."</td>";
-                        echo "<td>".$course->getTitle() ."</td>";
-                        echo "<td>".$course->getTitle() ."</td>";
-                        echo "<td>".$course->getTitle() ."</td>";
+                        echo "<td>".$CourseInfo->getTitle() ."</td>";
+                        echo "<td>".$CourseInfo->getCredits() ."</td>";
+                        echo "<td>".$CourseInfo->getPreReq() ."</td>";
+                        echo "<td>".$CourseInfo->getDuration() ."</td>";
+                        echo "<td>".$CourseInfo->getEnrl() ."</td>";
+                        echo "<td>".$CourseInfo->getRem() ."</td>";
+                        echo "<td>".$CourseInfo->getWait() ."</td>";
                     echo "</tr>";
-                }
+                //}
                     
                 ?>
             </thead>

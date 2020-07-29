@@ -20,6 +20,7 @@ $CourseList = RegistrationDAO::getCourseList();
 
 RegistrationPage::PrintHeader();
 RegistrationPage::printTable($RegistrationUser);
+//Fernando's function here
 RegistrationPage::PrintForm($CourseList);
 
 
@@ -30,7 +31,9 @@ if(!empty($_POST)) {
         $CourseID->setCRN($courseInfo[1]);
         $CourseID->setSubject($courseInfo[0]);
         $CourseInfoToAdd = RegistrationDAO::getCourseInfo($CourseID);
-        RegistrationPage::PrintCourseInfo($CourseInfoToAdd);
+        $Instructor = RegistrationDAO::getInstructorInfo($CourseInfoToAdd->getInstructorID());
+        RegistrationPage::PrintCourseInfo($CourseInfoToAdd, $Instructor);
+        
     }
 }
 

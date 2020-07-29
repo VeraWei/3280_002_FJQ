@@ -22,6 +22,7 @@ require_once("inc/entity/RegistrationUser.class.php");
 require_once("inc/entity/RouteTestPage.class.php");
 require_once("inc/entity/Tuition.class.php");
 require_once("inc/entity/User.class.php");
+require_once("inc/entity/Instructor.class.php");
 
 //Uility classes
 require_once("inc/utility/LoginManager.class.php");
