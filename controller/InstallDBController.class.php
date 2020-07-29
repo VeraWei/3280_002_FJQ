@@ -31,25 +31,38 @@ class InstallDBController {
     static function installDB(){
         $script_path = "data/sql/CourseReg.sql";
         $mysql_exe = self::getMySQLInstallationDirectory();
+        if (!empty(InstallDBPage::$errors)){
+            return; // configuration submitted is not valid (host, port, user and pwd) 
+        }
+
+        $isWindows = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN'); //Check if PHP is running on Windows machine
+
         if ($mysql_exe!=""){
-            $mysql_exe .= "\\bin\\";
+            if ($isWindows) {
+                $mysql_exe .= "bin\\";
+            } else {
+                $mysql_exe .= "bin/";
+            }
         }
         $mysql_exe .= "mysql";
     
-        $command = "cmd /c \"" .
-                        $mysql_exe . " " .
+        //$command = "cmd /c \"" /// trying to run "cmd" on not windows machines returns "127" 
+        $command = "\"" .
+                        $mysql_exe . "\" " .
                         "--user={$_POST['db_user']} " .
                         "--password={$_POST['db_pass']} " .
                         "--host {$_POST['db_host']} " .
                         "--port {$_POST['db_port']} " .
                         "< {$script_path} " . 
-                        "2>&1 \"" ;
+                        "2>&1 " ;
                         // 2>&1 to get the messages    
         //run database script on the server
         exec( $command , $output, $return_var );
-        if ($return_var==127 || $return_var==0) { //success creating database
+        
+        if ($return_var==0) { //success creating database
             self::writeFileDBConfig();
         } else { //fail creating database
+            InstallDBPage::$errors[] = "Error on script execution: '" . $command . "'"; 
             foreach ($output as $outputLine) {
                 error_log($outputLine);
                 InstallDBPage::$errors[] = $outputLine;

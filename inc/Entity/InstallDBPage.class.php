@@ -12,7 +12,7 @@ class InstallDBPage extends SuperPage
     static function body()
     { ?>
         <div class="container">  
-            <form id="dbsettings" action="" method="post">
+            <form id="dbsettings" method="post">
                 <h3><?php echo static::$title; ?></h3>
                 
                 <h4>Before submission, please ensure mysql command line utility is accessible for the user under which PHP runs on the server.</h4>
