@@ -110,3 +110,10 @@ fieldset {
     background: #9ed1e4c9;
     padding: 25px;
 }
+.message {
+  background: #9ed1e4c9;
+  padding: 25px;
+  color: rgb(8, 34, 11);
+  text-align: center;
+  font-size: 1.5em;
+}
