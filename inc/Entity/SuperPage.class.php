@@ -36,7 +36,7 @@ class SuperPage{
             <header>
                 <h1><?php echo static::$title; ?></h1>
             </header>
-            <?php static::onErrorMessage(); ?>
+            <?php static::onMessage(); ?>
             <article class="container">
     <?php }
 
@@ -57,7 +57,7 @@ class SuperPage{
     { 
         if (!empty(self::$errors)) { ?>
             <div class="error">
-                Messages:  
+                Errors:  
                 <ul>
                     <?php 
                     foreach (self::$errors as $errorDescription){
