@@ -4,7 +4,7 @@
 LogPage::$title = "User Login";
 // Call the HTML header
 LogPage::header();
-
+$error = null;
 if (!empty($_POST))   {
     
     //Initialize the DAO

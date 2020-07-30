@@ -16,7 +16,6 @@ require_once("inc/entity/Course.class.php");
 require_once("inc/entity/SuperPage.class.php");
 require_once("inc/entity/InstallDBPage.class.php");
 require_once("inc/entity/LogPage.class.php");
-require_once("inc/entity/Page.class.php");
 require_once("inc/entity/RegistrationPage.class.php");
 require_once("inc/entity/RegistrationUser.class.php");
 require_once("inc/entity/RouteTestPage.class.php");
@@ -56,21 +55,21 @@ require_once($inc);
 //Routes to Login
 $loginFunction = function () { require_once("controller/Login.php"); } ; //anonymous function for invoking login controller.
 Route::dispatchRequest("Team1.php",$loginFunction);
-Route::dispatchRequest("controller/Login.php", $loginFunction);
+//Route::dispatchRequest("controller/Login.php", $loginFunction);
 
 //Routes to Login Out
 $logOutFunction = function () { require_once("controller/LogOut.php"); } ; //anonymous function for invoking login out controller.
-Route::dispatchRequest("controller/LogOut.php",$logOutFunction);
+//Route::dispatchRequest("controller/LogOut.php",$logOutFunction);
 Route::dispatchRequest("LogOut.php", $logOutFunction);
 
 // Main page
 $courseRegistrationFunction = function () { require_once("controller/CourseRegistration.php"); };
-Route::dispatchRequest("controller/CourseRegistration.php",$courseRegistrationFunction); //Joel is testing this URL
+//Route::dispatchRequest("controller/CourseRegistration.php",$courseRegistrationFunction); //Joel is testing this URL
 Route::dispatchRequest("CourseRegistration.php",$courseRegistrationFunction); //Vera is redirecting to this URL in login controller
 
 //Test 
-Route::dispatchRequest("test-page",function () { RouteTestPage::renderContents(); });
-Route::dispatchRequest("another-test",function () { RouteTestPage::renderContents(); }, "GET");
+//Route::dispatchRequest("test-page",function () { RouteTestPage::renderContents(); });
+//Route::dispatchRequest("another-test",function () { RouteTestPage::renderContents(); }, "GET");
 
 // Succes at installing DB. InstallDBPage
 //Route::dispatchRequest("install-db-is-ok",function () { InstallDBPage::renderContents(); }, "GET");
