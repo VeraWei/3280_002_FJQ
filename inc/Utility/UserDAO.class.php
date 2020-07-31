@@ -1,5 +1,16 @@
 <?php
 
+/*
+
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| StudentID | int          | NO   | PRI | NULL    |       |
+| Password  | varchar(250) | NO   |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+ 
+*/
+
 class UserDAO   {
 
     // Create a member to store the PDO agent

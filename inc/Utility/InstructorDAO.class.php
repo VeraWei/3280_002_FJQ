@@ -1,4 +1,16 @@
 <?php 
+/* 
+1. Instructor
++----------------+-------------+------+-----+---------+----------------+
+| Field          | Type        | Null | Key | Default | Extra          |
++----------------+-------------+------+-----+---------+----------------+
+| InstructorID   | int         | NO   | PRI | NULL    | auto_increment |
+| InstructorName | char(35)    | NO   |     | NULL    |                |
+| Phone          | char(25)    | NO   |     | NULL    |                |
+| Email          | varchar(35) | NO   |     | NULL    |                |
++----------------+-------------+------+-----+---------+----------------+
+
+*/
     class InstructorDAO {
         public static $db;
         static function initialize($className)    {

@@ -4,6 +4,7 @@ class SuperPage{
     public static $title = "Class SuperPage";
 
     public static $style = "css/styles.css";
+    public static $bootstrapStyle = "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
 
     public static $author = "Fernando";
 
@@ -56,7 +57,7 @@ class SuperPage{
     static function onMessage()  
     { 
         if (!empty(self::$errors)) { ?>
-            <div class="error">
+            <div class="bg-warning">
                 Errors:  
                 <ul>
                     <?php 
