@@ -29,7 +29,7 @@ class RegistrationDAO  {
 
         $sqlUpdate = "UPDATE courses 
         SET Enrl = :enrl, Rem = :Rem, Wait = :Wait 
-        WHERE CRN = :crn AND WHERE Subject = :sub;";
+        WHERE CRN = :crn AND Subject = :sub;";
         self::$db->query($sqlUpdate);
         self::$db->bind(':enrl', $Enrl);
         self::$db->bind(':Rem', $Rem);
@@ -38,13 +38,14 @@ class RegistrationDAO  {
         self::$db->bind(':sub', $Subject);
         self::$db->execute();
 
-        $sqlInsert = "INSERT INTO students_courses VALUES(:CRN, :StudentID, :RegistrationDate);";
+        $sqlInsert = "INSERT INTO students_courses VALUES(:CRN, :StudentID, :RegistrationDate, :Subject);";
 
         // QUERY BIND EXECUTE RETURN
         self::$db->query($sqlInsert);
-        self::$db->bind(':CRN',$RegistrationUser->getCRN());
+        self::$db->bind(':CRN',$RegistrationCourse->getCRN());
         self::$db->bind(':StudentID', $userID);
         self::$db->bind(':RegistrationDate', date("Y-m-d"));
+        self::$db->bind(':Subject', $Subject);
         self::$db->execute();
         return self::$db->lastInsertedId();
     }
@@ -75,28 +76,21 @@ class RegistrationDAO  {
     }
     
     // DELETE
-    static function deleteReservation(int $ReservationId) {
+    static function deleteRegistration() {
+        $StudentId = $_SESSION['loggedin'];
+        $deleteQuery = "DELETE FROM Students_Courses WHERE StudentId = :StudentId And CRN = :CRN And Subject = :Subject ;";
+    
+        self::$db->query($deleteQuery);
+        self::$db->bind(':StudentId', $StudentId);
+        self::$db->bind(':CRN', $_GET["crn"]);
+        self::$db->bind(':Subject', $_GET["subject"]);
 
-        // Yea...yea... it is a drill like the one before        
+        self::$db->execute();
 
-            $deleteQuery = "DELETE FROM reservation WHERE ReservationID = :reservationid;";
-    
-            try{
-                self::$db->query($deleteQuery);
-                self::$db->bind(':reservationid', $ReservationId);
-                self::$db->execute();
-    
-                if(self::$db->rowCount() != 1){
-                    throw new Exception("Problem in deleting book $ReservationId");
-                }
-            }
-            catch(Exception $e){
-                echo $e->getMessage();
-                return false;
-            }
-    
-            return true;
-        
+        if(self::$db->rowCount() != 1){
+            $errorMsg = "Problem deleting course registration";
+            error_log($errorMsg);
+        }    
     }
 
 }

@@ -27,7 +27,7 @@ section{
     padding: 15px;
 }
 section.main{
-    width: 70%;
+    width: 65%;
     /*
     grid-row:1/2;
     grid-column: 1/2;*/
@@ -93,8 +93,9 @@ input[type="submit"]{
 
 .error{
     padding: 5px;
-    background-color: aliceblue;
+    background-color: #e05a5a;
     color: rgb(54, 54, 54);
+    font-weight:bold;
     width: 99%;
 }
 

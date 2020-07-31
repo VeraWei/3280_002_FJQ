@@ -30,7 +30,7 @@ class InstallDBController {
             InstallDBPage::$messages[] = " Your application is ready to use." ;
             InstallDBPage::$messages[] = ' You will be redirected to Login page in 10 seconds. Or you can <a href="Team1.php">click here</a> to log in.' ;
 
-            InstallDBPage::header();
+            InstallDBPage::PrintHeader();
             InstallDBPage::footer();
 
         }

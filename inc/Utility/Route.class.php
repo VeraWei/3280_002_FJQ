@@ -60,10 +60,6 @@ class Route {
     }
 
     static function checkPrivileges(){
-        //TODO remove this return before submission of the Project.
-        return;
-
-
         if ( in_array($_GET["route"],self::$exceptionRoutes)){
             return ; //there is nothing to check for the exceptions
         }

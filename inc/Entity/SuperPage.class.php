@@ -15,12 +15,12 @@ class SuperPage{
     static function renderContents() 
     { 
         //Use late binding to get the implementation of subclasses
-        static::header();
+        static::PrintHeader();
         static::body();
         static::footer();
     }
 
-    static function header()
+    static function PrintHeader()
     { ?>
         <!DOCTYPE html>
         <html>
