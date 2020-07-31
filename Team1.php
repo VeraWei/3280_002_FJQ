@@ -27,6 +27,8 @@ require_once("inc/entity/User.class.php");
 require_once("inc/utility/LoginManager.class.php");
 require_once("inc/utility/PDOService.class.php");
 require_once("inc/utility/RegistrationDAO.class.php");
+require_once("inc/utility/CourseDAO.class.php");
+require_once("inc/utility/InstructorDAO.class.php");
 require_once("inc/utility/Route.class.php");
 require_once("inc/utility/TuitionDAO.class.php");
 require_once("inc/utility/UserDAO.class.php");

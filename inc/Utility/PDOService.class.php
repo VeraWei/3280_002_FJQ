@@ -140,7 +140,6 @@ class PDOService {
 
     //This function will return a single result of the executed Query
     public function singleResult()  {
-
         //Set the fetch mode
         $this->_pstmt->setFetchMode(PDO::FETCH_CLASS, $this->_className);
         //Return the result

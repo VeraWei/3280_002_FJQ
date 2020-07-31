@@ -8,6 +8,7 @@ class RegistrationPage {
                 <title></title>
                 <meta charset="utf-8">
                 <title></title>   
+                <!-- <link rel="stylesheet" href="css/styles.css" /> -->
                 <link rel="stylesheet" href="css/styles.css" />
             </head>
 
@@ -69,31 +70,43 @@ class RegistrationPage {
             <table>
              <thead style="background: rgba(0, 0, 0, 0)">
                 <tr>
+
                     <th>Title</th>
-                    <th>Credits</th>
-                    <th>PreReq</th>
-                    <th>Duration</th>
-                    <th>Enrl</th>
-                    <th>Rem</th>
-                    <th>Wait</th>
-
-
+                    <td><?php echo $CourseInfo->getTitle()." (".$CourseInfo->getSubject()."-".$CourseInfo->getCRN().")";?></td>
                 </tr>
-                <?php 
-                /*foreach($CourseInfo as $course)
-                {*/
-                    echo "<tr>";
-                        echo "<td>".$CourseInfo->getTitle() ."</td>";
-                        echo "<td>".$CourseInfo->getCredits() ."</td>";
-                        echo "<td>".$CourseInfo->getPreReq() ."</td>";
-                        echo "<td>".$CourseInfo->getDuration() ."</td>";
-                        echo "<td>".$CourseInfo->getEnrl() ."</td>";
-                        echo "<td>".$CourseInfo->getRem() ."</td>";
-                        echo "<td>".$CourseInfo->getWait() ."</td>";
-                    echo "</tr>";
-                //}
-                    
-                ?>
+                <tr>
+                    <th>Credits</th>
+                    <td><?php echo $CourseInfo->getCredits();?></td>
+                </tr>
+                <tr>
+                    <th>PreReq</th>
+                    <td><?php echo $CourseInfo->getPreReq();?></td>
+                </tr>
+                <tr>
+                    <th>Duration</th>
+                    <td><?php echo $CourseInfo->getDuration();?></td>
+                </tr>
+                <tr>
+                    <th>Enrl</th>
+                    <td><?php echo $CourseInfo->getEnrl();?></td>
+                </tr>
+                <tr>
+                    <th>Rem</th>
+                    <td><?php echo $CourseInfo->getRem();?></td>
+                </tr>
+                <tr>
+                    <th>Wait</th>
+                    <td><?php echo $CourseInfo->getWait();?></td>
+                </tr>
+                <tr>
+                    <th>Instructor Name</th>
+                    <td><?php echo $Instructor->getInstructorName();?></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><?php echo $Instructor->getEmail();?></td>
+                </tr>
+                <tr></tr>
             </thead>
             </table>
     

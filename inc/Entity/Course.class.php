@@ -72,6 +72,9 @@ private $Wait;
  function getWait(){
      return $this->Wait;
  }
+ function getTitle(){
+    return $this->Title;
+}
 
  //Verify the password
  function verifyPassword(string $passwordToVerify) {

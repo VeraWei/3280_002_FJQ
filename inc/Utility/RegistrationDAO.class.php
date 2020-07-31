@@ -13,15 +13,14 @@ class RegistrationDAO  {
 
     // One of the functionality for the class abstracted by this DAO: CREATE
     // Remember that Create means INSERT
-    static function addRegistration(RegistrationUser $RegistrationUser, $userID) {
+    static function addRegistration(Course $RegistrationCourse, $userID) {
+        $Enrl = $RegistrationCourse->getEnrl();
+        $Rem = $RegistrationCourse->getRem();
+        $Wait = $RegistrationCourse->getWait();
+        $CRN = $RegistrationCourse->getCRN();
+        $Subject = $RegistrationCourse->getSubject();
 
-        $Enrl = $RegistrationUser->getEnrl();
-        $Rem = $RegistrationUser->getRem();
-        $Wait = $RegistrationUser->getWait();
-        $CRN = $RegistrationUser->getCourseID();
-        $Subject = $RegistrationUser->getSubject();
-
-        if($Rem < 0)
+        if($Rem <= 0)
             $Wait++;
         else {
             $Enrl++;
@@ -30,15 +29,14 @@ class RegistrationDAO  {
 
         $sqlUpdate = "UPDATE courses 
         SET Enrl = :enrl, Rem = :Rem, Wait = :Wait 
-        WHERE CRN = :crn && Subject = :Subject;";
-        self::$db->query($sqlInsert);
+        WHERE CRN = :crn AND WHERE Subject = :sub;";
+        self::$db->query($sqlUpdate);
         self::$db->bind(':ernl', $Enrl);
         self::$db->bind(':Rem', $Rem);
         self::$db->bind(':Wait', $Wait);
         self::$db->bind(':crn', $CRN);
-        self::$db->bind(':Subject', $Subject);
+        self::$db->bind(':sub', $Subject);
         self::$db->execute();
-
 
         $sqlInsert = "INSERT INTO students_courses VALUES(:CRN, :StudentID, :RegistrationDate);";
 
@@ -99,25 +97,6 @@ class RegistrationDAO  {
     
             return true;
         
-    }
-
-    static function getCourseInfo(RegistrationUser $CourseID) {
-        $query = "SELECT *  FROM courses WHERE Subject = :subject AND CRN = :crn;";
-        self::$db->query($query);
-        self::$db->bind(':subject', $CourseID->getSubject());
-        self::$db->bind(':crn', $CourseID->getCRN());
-        self::$db->execute();
-        return self::$db->singleResult();
-        
-    }
-
-    static function getInstructorInfo(int $instructorID){
-        $query = "SELECT * FROM instructors WHERE InstructorID = :instructorID;";
-
-        self::$db->query($query);
-        self::$db->bind(':instructorID', $instructorID);
-        self::$db->execute();
-        return self::$db->singleResult();
     }
 
 }
