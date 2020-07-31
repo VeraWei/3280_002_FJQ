@@ -31,7 +31,7 @@ class RegistrationDAO  {
         SET Enrl = :enrl, Rem = :Rem, Wait = :Wait 
         WHERE CRN = :crn AND WHERE Subject = :sub;";
         self::$db->query($sqlUpdate);
-        self::$db->bind(':ernl', $Enrl);
+        self::$db->bind(':enrl', $Enrl);
         self::$db->bind(':Rem', $Rem);
         self::$db->bind(':Wait', $Wait);
         self::$db->bind(':crn', $CRN);
