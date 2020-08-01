@@ -25,21 +25,24 @@ if (!empty($_POST))   {
         //Set the user to logged in
         $_SESSION['loggedin'] = $authUser->getStudentID();
         
-    }
-        
-    //Use header to send the user to the user profile page
-    if (LoginManager::verifyLogin())    {
-        // $u = UserDAO::getUser($_SESSION['loggedin']);
-        header('Location: CourseRegistration.php');
-        // it should locate to the next page;
     } else {
+
         $error = "Password Error!";
     }
-}
+        
     
-// Show login form of Login page
-LogPage::loginDescription($error);
-LogPage::loginForm();
+}
+//Use header to send the user to the user profile page
+if (LoginManager::verifyLogin())    {
+    // $u = UserDAO::getUser($_SESSION['loggedin']);
+    header('Location: CourseRegistration.php');
+// it should locate to the next page;
+} else {
+
+    // Show login form of Login page
+    LogPage::loginDescription($error);
+    LogPage::loginForm();
+} 
 
 // Finally I need to call the last function from the HTML
 LogPage::footer();

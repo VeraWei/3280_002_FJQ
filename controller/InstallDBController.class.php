@@ -26,9 +26,9 @@ class InstallDBController {
             //header("Location:install-db-is-ok");
             //header("Location:Team1.php");
             //Set Refresh header using PHP.
-            header( "refresh:10;url= Team1.php" );
+            header( "refresh:5;url= Team1.php" );
             InstallDBPage::$messages[] = " Your application is ready to use." ;
-            InstallDBPage::$messages[] = ' You will be redirected to Login page in 10 seconds. Or you can <a href="Team1.php">click here</a> to log in.' ;
+            InstallDBPage::$messages[] = ' You will be redirected to Login page in 5 seconds. Or you can <a href="Team1.php">click here</a> to log in.' ;
 
             InstallDBPage::PrintHeader();
             InstallDBPage::footer();

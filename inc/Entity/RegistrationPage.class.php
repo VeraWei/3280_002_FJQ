@@ -34,12 +34,10 @@ class RegistrationPage extends SuperPage {
             <header>
                 <div class="header-container">
                     <h1><?php echo static::$title; ?></h1>
-                    <h3>UserID: <?php  echo($_SESSION['loggedin']);?></h3>
-
+                    <div><?php echo "UserID: " .$_SESSION['loggedin']; ?></div>
                     <a class="btn btn-link" href="LogOut.php">Log Out</a>
                 </div>
             </header>
-
 
             <?php static::onMessage(); ?>
             <article>
@@ -82,10 +80,10 @@ class RegistrationPage extends SuperPage {
             </thead>
             </table>
             <form method="post">
-                <label style="font-size: 30px;" for="tuition"><strong>Tuition Due:</strong></label>
+                <label for="tuition"><strong>Tuition Due:</strong></label>
                 <input type="text" disabled value="<?php echo self::$Tuition->getAmountOwing();?>"/>
                 <input type="number" name="payment"/>
-                <input type="submit" name="TuitionSubmit" value="Pay Tuition"/>
+                <input class="btn btn-primary btn-sm" type="submit" name="TuitionSubmit" value="Pay Tuition"/>
 
             </form>
             </section>
