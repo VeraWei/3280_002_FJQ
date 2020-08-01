@@ -44,6 +44,15 @@ select {
     margin-bottom: 3em;
 }
 
+#logout{
+    display: inline;
+    font-size: 1em;
+}
+#logout input {
+    background-color: white;
+    border-radius: 10px;
+}
+
 h1{
     line-height: 1.5em;
     font-size: 2em;
@@ -51,6 +60,10 @@ h1{
 }
 h2{
     font-family: Helvetica, Arial, sans-serif;
+}
+h3{
+    font-family: Helvetica, Arial, sans-serif;
+    display: inline;
 }
 table{
     

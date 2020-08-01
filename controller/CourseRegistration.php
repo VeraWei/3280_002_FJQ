@@ -8,6 +8,7 @@ InstructorDAO::initialize('Instructor');
 $loggedin = $_SESSION["loggedin"];
 
 if(!empty($_POST)) {
+    var_dump($_POST);
     if (empty($_POST["courses"])){
         RegistrationPage::$errors[] = "No course selected.";
     } 

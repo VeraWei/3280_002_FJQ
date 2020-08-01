@@ -1,6 +1,8 @@
 <?php 
 class RegistrationPage extends SuperPage {
 
+    public static $User;
+    
     public static $RegistrationUser;
 
     public static $CourseList;
@@ -29,6 +31,13 @@ class RegistrationPage extends SuperPage {
             <header>
                 <h1><?php echo static::$title; ?></h1>
             </header>
+            <div id="greeting">
+                <h3>UserID: <?php  echo($_SESSION['loggedin']);?></h3>
+                <form id="logout" action="Logout.php" method="post">
+                <input type="submit" value="Log out" />
+                </form>
+            </div>
+
             <?php static::onMessage(); ?>
             <article class="container">
     <?php }
