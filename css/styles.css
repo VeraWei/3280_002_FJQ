@@ -30,40 +30,6 @@ section.main{
 }
 section.form1{
     width: 30%;
-<<<<<<< HEAD
-    /*
-    grid-row:1/2;
-    grid-column: 2/3;*/
-}
-
-select {
-    margin-bottom: 3em;
-}
-
-#logout{
-    display: inline;
-    font-size: 1em;
-}
-#logout input {
-    background-color: white;
-    border-radius: 10px;
-}
-
-h1{
-    line-height: 1.5em;
-    font-size: 2em;
-    font-family: Helvetica, Arial, sans-serif;
-}
-h2{
-    font-family: Helvetica, Arial, sans-serif;
-}
-h3{
-    font-family: Helvetica, Arial, sans-serif;
-    display: inline;
-}
-table{
-=======
->>>>>>> 5d376c0c4bf538f63878863bd5eab3c4c2cc23ea
     
     grid-row:1/2;
     grid-column: 2/3;
