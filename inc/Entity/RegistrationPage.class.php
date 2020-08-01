@@ -13,6 +13,8 @@ class RegistrationPage extends SuperPage {
 
     public static $coursesArray;
 
+    public static $Tuition;
+
     public static $title = "Course Registration Form";
 
     static function PrintHeader()
@@ -32,12 +34,12 @@ class RegistrationPage extends SuperPage {
             <header>
                 <div class="header-container">
                     <h1><?php echo static::$title; ?></h1>
+                    <h3>UserID: <?php  echo($_SESSION['loggedin']);?></h3>
+
                     <a class="btn btn-link" href="LogOut.php">Log Out</a>
                 </div>
             </header>
-            <div id="greeting">
-                <h3>UserID: <?php  echo($_SESSION['loggedin']);?></h3>
-            </div>
+
 
             <?php static::onMessage(); ?>
             <article>
@@ -61,7 +63,7 @@ class RegistrationPage extends SuperPage {
                     <th>Subject</th>
                     <th>Title</th>
                     <th>Registered on:</th>
-                    <th></th>
+                    <th>Drop</th>
                 </tr>
                 <?php 
                 foreach($RegistrationUser as $courses)
@@ -79,6 +81,13 @@ class RegistrationPage extends SuperPage {
                 ?>
             </thead>
             </table>
+            <form method="post">
+                <label style="font-size: 30px;" for="tuition"><strong>Tuition Due:</strong></label>
+                <input type="text" disabled value="<?php echo self::$Tuition->getAmountOwing();?>"/>
+                <input type="number" name="payment"/>
+                <input type="submit" name="TuitionSubmit" value="Pay Tuition"/>
+
+            </form>
             </section>
             <?php 
                 }
@@ -96,7 +105,11 @@ class RegistrationPage extends SuperPage {
                     if (in_array( $value, self::$coursesArray)){
                         echo "<option value='". $value ."' disabled>".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
                     } else {
-                        echo "<option value='". $value ."'>".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
+                        if(isset($_POST['courses']) && $_POST['courses']== $value)
+                            $select = "selected";
+                        else
+                            $select = '';
+                        echo "<option value='". $value ."'" . $select . ">".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
                     }
                 }
                     ?>

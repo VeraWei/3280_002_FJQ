@@ -3,13 +3,16 @@
 RegistrationDAO::initialize('RegistrationUser');
 CourseDAO::initialize('Course');
 InstructorDAO::initialize('Instructor');
+TuitionDAO::initialize('Tuition');
 
 //session_start();
 $loggedin = $_SESSION["loggedin"];
 
 if(!empty($_POST)) {
-    var_dump($_POST);
-    if (empty($_POST["courses"])){
+    if(isset($_POST['TuitionSubmit'])) {
+        TuitionDAO::updateTuition($loggedin, ($_POST['payment'] + 0) * (-1));
+    } 
+    elseif (empty($_POST["courses"])){
         RegistrationPage::$errors[] = "No course selected.";
     } 
     else {
@@ -19,12 +22,16 @@ if(!empty($_POST)) {
             $CourseID->setSubject($RegistrationInfo[0]);
             $CourseID->setCRN($RegistrationInfo[1]);
             $CourseInfoToAdd = CourseDAO::getCourseInfo($CourseID);
+            try{
             RegistrationDAO::addRegistration($CourseInfoToAdd, $loggedin);
+            }
+            catch(Exception $e){
+                RegistrationPage::$errors[] = "Failed to add course. Please check if it's already added";
+            }
             if (empty(RegistrationPage::$errors)) {
                 $messages[] = "Registration Success.";
             }
-             
-            //unset($_POST);
+            
         }
         if($_POST['action'] == 'Show Info') {
             $CourseID = new Course;
@@ -38,20 +45,22 @@ if(!empty($_POST)) {
         }
     }
 } else {
-    /*
-    if ($_GET["route"]="delete-registration"){
+    
+    if ($_GET["route"]=="delete-registration"){
         RegistrationDAO::deleteRegistration();
         
         unset($_GET["route"]);
         header('Location: CourseRegistration.php');
+        exit;
     } 
-    */   
+      
 }
 
 
 
 RegistrationPage::$RegistrationUser = RegistrationDAO::getCourses($loggedin);
 RegistrationPage::$CourseList = RegistrationDAO::getCourseList();
+RegistrationPage::$Tuition = TuitionDAO::getTuition($loggedin);
 RegistrationPage::renderContents();
 
 ?>

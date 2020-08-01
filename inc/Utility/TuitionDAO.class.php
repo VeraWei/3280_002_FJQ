@@ -19,7 +19,7 @@
         private static $db;
 
         // create the init function to start the PDO agent
-        static function init() {
+        static function initialize() {
            self::$db = new PDOService(self::CLASSNAME);
         }   
 
@@ -34,6 +34,13 @@
             self::$db->execute_direct($sql,$StudentID);
             return self::$db->singleResult();
         }
+
+        static function updateTuition($Studentid,$amountOwing) {
+            $args = ["amountOwing" => $amountOwing, "StudentID"=>$Studentid];
+            $sql = "UPDATE Tuition Set AmountOwing = AmountOwing + :amountOwing WHERE StudentID = :StudentID ";
+            self::$db->execute_direct($sql,$args);
+            return self::$db->lastInsertedId();
+            }
 
 
     }

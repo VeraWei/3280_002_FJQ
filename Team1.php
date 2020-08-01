@@ -69,7 +69,7 @@ $courseRegistrationFunction = function () { require_once("controller/CourseRegis
 //Route::dispatchRequest("controller/CourseRegistration.php",$courseRegistrationFunction); //Joel is testing this URL
 Route::dispatchRequest("CourseRegistration.php",$courseRegistrationFunction); //Vera is redirecting to this URL in login controller
 
-///Route::dispatchRequest("delete-registration",$courseRegistrationFunction,"GET");
+Route::dispatchRequest("delete-registration",$courseRegistrationFunction,"GET");
 
 
 

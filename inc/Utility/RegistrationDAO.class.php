@@ -77,7 +77,10 @@ class RegistrationDAO  {
         self::$db->bind(':RegistrationDate', date("Y-m-d"));
         self::$db->bind(':Subject', $Subject);
         self::$db->execute();
-        return self::$db->lastInsertedId();
+
+        TuitionDAO::updateTuition($userID, 600);
+
+
     }
     
     // GET = READ = SELECT

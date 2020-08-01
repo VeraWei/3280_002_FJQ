@@ -13,7 +13,7 @@ class Tuition {
     function getStudentID() : int{
         return $this->StudentID;
     }
-    function getAmountOwing() : int{
+    function getAmountOwing() : string{
         return $this->AmountOwing;
     }
     function getTuitionPaid() : bool{
@@ -23,7 +23,7 @@ class Tuition {
     function setStudentID(int $StudentID){
         $this->StudentID = $StudentID;
     }
-    function setAmountOwing(int $AmountOwing){
+    function setAmountOwing(string $AmountOwing){
         $this->AmountOwing = $AmountOwing;
     }
     function setTuitionPaid(bool $TuitionPaid){
