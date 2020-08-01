@@ -25,21 +25,22 @@ class RegistrationPage extends SuperPage {
             <meta name="author" content="<?php echo static::$author; ?>">
             <title><?php echo static::$title; ?></title>
             <link href="<?php echo static::$style; ?>" rel="stylesheet">
+            <link href="<?php echo static::$bootstrapStyle; ?>" rel="stylesheet">
         </head>
 
         <body>
             <header>
-                <h1><?php echo static::$title; ?></h1>
+                <div class="header-container">
+                    <h1><?php echo static::$title; ?></h1>
+                    <a class="btn btn-link" href="LogOut.php">Log Out</a>
+                </div>
             </header>
             <div id="greeting">
                 <h3>UserID: <?php  echo($_SESSION['loggedin']);?></h3>
-                <form id="logout" action="Logout.php" method="post">
-                <input type="submit" value="Log out" />
-                </form>
             </div>
 
             <?php static::onMessage(); ?>
-            <article class="container">
+            <article>
     <?php }
     
         static function body() {
@@ -53,7 +54,7 @@ class RegistrationPage extends SuperPage {
         $RegistrationUser = self::$RegistrationUser;
             ?>
             <section class="main">
-            <table>
+            <table class="table table-striped table-dark">
              <thead>
                 <tr>
                     <th>CRN</th>
@@ -87,7 +88,7 @@ class RegistrationPage extends SuperPage {
             ?>
             <section class="form1">
             <form  method="POST">
-                <select name="courses" id="courses" >
+                <select class="custom-select" name="courses" id="courses" >
                     <option disabled selected>Choose your course</option>
                     <?php
                 foreach($CourseList as $CourseID) {
@@ -103,7 +104,8 @@ class RegistrationPage extends SuperPage {
                 <br>
                 <br>
                 <br>
-                <input type="submit" name="action" value="Show Info"/> <input type="submit" name="action" value="Register"/>
+                <button class="btn btn-primary" type="submit" name="action" value="Show Info"> Show Info</button>
+                <button class="btn btn-outline-primary" type="submit" name="action" value="Register"> Register</button>
                     
             </form>
 
@@ -117,7 +119,7 @@ class RegistrationPage extends SuperPage {
                 $CourseInfo = self::$CourseInfo; 
                 $Instructor = self::$Instructor;
                 ?>
-            <table>
+            <table class="table table-bordered table-dark">
              <thead style="background: rgba(0, 0, 0, 0)">
                 <tr>
 

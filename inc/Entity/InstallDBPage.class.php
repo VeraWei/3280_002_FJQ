@@ -13,7 +13,7 @@ class InstallDBPage extends SuperPage
     { ?>
         <div class="container">  
             <form id="dbsettings" method="post">
-                <h3><?php echo static::$title; ?></h3>
+                <h1><?php echo static::$title; ?></h1>
                 
                 <h4>Before submission, please ensure mysql command line utility is aavailable on the server.</h4>
                 <fieldset>

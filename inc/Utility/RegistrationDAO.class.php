@@ -1,4 +1,34 @@
 <?php
+/* 
+1. Courses
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| CRN          | smallint    | NO   | PRI | NULL    |       |
+| Credits      | int         | NO   |     | NULL    |       |
+| Subject      | varchar(35) | NO   | PRI | NULL    |       |
+| Title        | char(150)   | NO   |     | NULL    |       |
+| InstructorID | int         | YES  | MUL | NULL    |       |
+| PreReq       | bit(1)      | NO   |     | b'0'    |       |
+| Duration     | int         | NO   |     | NULL    |       |
+| Enrl         | int         | NO   |     | NULL    |       |
+| Rem          | int         | NO   |     | NULL    |       |
+| Wait         | int         | NO   |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+
+.............................................................
+
+2. Students_Courses
++------------------+-------------+------+-----+---------+-------+
+| Field            | Type        | Null | Key | Default | Extra |
++------------------+-------------+------+-----+---------+-------+
+| CRN              | smallint    | NO   | PRI | NULL    |       |
+| StudentID        | int         | NO   | PRI | NULL    |       |
+| RegistrationDate | date        | NO   |     | NULL    |       |
+| Subject          | varchar(35) | NO   | PRI | NULL    |       |
++------------------+-------------+------+-----+---------+-------+
+
+*/
 
 class RegistrationDAO  {
 

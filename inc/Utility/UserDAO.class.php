@@ -1,5 +1,16 @@
 <?php
 
+/*
+
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| StudentID | int          | NO   | PRI | NULL    |       |
+| Password  | varchar(250) | NO   |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+ 
+*/
+
 class UserDAO   {
 
     // Create a member to store the PDO agent
@@ -15,7 +26,7 @@ class UserDAO   {
         //QUERY, BIND, EXECUTE, RETURN
         
         try {
-            $selectOne = "SELECT * FROM PASSWORDS WHERE StudentID = :StudentID;";
+            $selectOne = "SELECT * FROM USERS WHERE StudentID = :StudentID;";
     
             self::$db->query($selectOne);
             self::$db->bind(':StudentID', $StudentID);

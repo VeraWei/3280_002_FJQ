@@ -1,26 +1,21 @@
-*{
-    box-sizing: border-box;
-}
-html{
-    background-color: snow;
-}
 body{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
     background-image: url("../data/assets/bg.jpg");
-    /*background-color: lightblue;*/
-    border: 1px solid black;
-    display: table;
-    width: 90%;
-    margin: auto;
-    min-height: 900px;
-    padding: 20px;
-    font-size: 1.2em;
+    background-size: cover;
+    min-width: 1440px;
 }
-article{
-    padding: 10px;/*
-    display: grid;
-    grid-template-columns: 70% 30%; 
-    grid-template-rows: 850px;              
-    */
+header {
+    margin: 40px 8px 20px 8px;
+}
+.header-container {
+    display: flex;
+}
+.header-container h1 {
+    flex: 1;
 }
 section{
     float: left;
@@ -28,13 +23,14 @@ section{
 }
 section.main{
     width: 65%;
-    /*
+    
     grid-row:1/2;
-    grid-column: 1/2;*/
+    grid-column: 1/2;
     border-right: 1px dotted black;
 }
 section.form1{
     width: 30%;
+<<<<<<< HEAD
     /*
     grid-row:1/2;
     grid-column: 2/3;*/
@@ -66,58 +62,17 @@ h3{
     display: inline;
 }
 table{
+=======
+>>>>>>> 5d376c0c4bf538f63878863bd5eab3c4c2cc23ea
     
-    border-collapse: collapse;
-    padding: 5px;
-    width: 100%;
-}
-td, th{
-    border-collapse: collapse;
-    border-bottom: 1px solid rgb(126, 126, 126);
-    padding: 5px;
-    text-align: left;
-}
-th{
-    padding: 20px 5px;
+    grid-row:1/2;
+    grid-column: 2/3;
 }
 
-thead{
-    background-color: aliceblue;
-    font-size: bigger;
-    line-height: 1.5em;
-    
+section.form1 form {
+    margin-bottom: 20px;
 }
 
-.evenRow{
-    background-color: ghostwhite;
-}
-input{
-    margin-bottom: 5px;
-    line-height: 1.2em;
-}
-input[type="submit"]{  
-    margin: 10px;              
-    padding: 5px;
-    width: 6em;
-    font-size: 1.2em;
-    line-height: 1.2em;
-    background-color: steelblue;
-}
-
-.error{
-    padding: 5px;
-    background-color: #e05a5a;
-    color: rgb(54, 54, 54);
-    font-weight:bold;
-    width: 99%;
-}
-
-td{
-    font-size: 0.8em;
-}
-
-.message {
-    background: #9ed1e4c9;
-    padding: 25px;
-    color: rgb(54, 54, 54);
+select {
+    margin-bottom: 3em;
 }
