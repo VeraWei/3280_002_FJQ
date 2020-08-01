@@ -6,7 +6,6 @@ class LogPage
 
     static function header()
     { ?>
-        <!-- Start the page 'header' -->
         <!DOCTYPE html>
         <html>
 
@@ -27,7 +26,7 @@ class LogPage
 
         static function footer()
         { ?>
-                <!-- Start the page's footer -->
+
             </article>
             <div class="footer">
                 <p class="pagefooterdiv">
@@ -43,9 +42,10 @@ class LogPage
 
     <?php }
 
+    //Display errors when credentials are wrong  
     static function loginDescription($error = null)
     { ?>
-    <!-- Start the page's show login form -->
+    
     <section class="login-container">
         <div class="login-content">
             <h1>Login</h1>
@@ -54,22 +54,21 @@ class LogPage
         <?php
 
     }
-
+    //Start the page's show login form
     static function loginForm()
     {
         ?>
-            <!-- Start the page's add entry form -->
             <section class="form1">
 
                 <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
                     <table CLASS="dataentrytable" SUMMARY="This data entry table is used to format the user login fields">
                         <tr>
                             <td CLASS="delabel" scope="row"><LABEL for=UserID><SPAN class="fieldlabeltext">User ID:</SPAN></LABEL></td>
-                            <td CLASS="dedefault"><input class="login-input" type="text" name="username" size="26" maxlength="9" ID="UserID" /></td>
+                            <td CLASS="dedefault"><input class="login-input" type="number" name="username" required size="26" maxlength="20" ID="UserID" /></td>
                         </tr>
                         <tr>
                             <td CLASS="delabel" scope="row"><LABEL for=PIN><SPAN class="fieldlabeltext">PIN:</SPAN></LABEL></td>
-                            <td CLASS="dedefault"><input class="login-input" type="password" name="PIN" size="26" maxlength="20" ID="PIN" /></td>
+                            <td CLASS="dedefault"><input class="login-input" type="password" name="PIN" required size="26" maxlength="20" ID="PIN" /></td>
                         </tr>
                     </table>
                     <p>
@@ -96,7 +95,7 @@ class LogPage
             echo "<tbody>";
             $teams = array("Viana Maia Fernando"=>"300320728", "Giladi Joel"=>"300302313", "Wei Qiuming"=>"300312797");
             foreach($teams as $name => $studentID)  {         
-                // make sure to use the correct tr class
+                
                 echo '<tr>';
                 echo "<td>$name</td>";
                 echo "<td>$studentID</td>";

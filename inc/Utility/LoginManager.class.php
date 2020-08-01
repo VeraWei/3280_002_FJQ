@@ -21,14 +21,11 @@ class LoginManager  {
         } else {
 
             //The user is not logged in
-            //Destroy any session just in case
+            //Destroy any session
             session_destroy();
-
-            //Send them back to the login pages using header
                         
             //return false
             return false;
-
         }
         
         // End else

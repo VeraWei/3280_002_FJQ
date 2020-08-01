@@ -15,11 +15,12 @@ class InstallDBController {
             self::installDB();
         } 
         // User opted for manual execution of database script creation, then only creates file dbconfig.php
+        /*
         if (isset($_POST["submitManual"]))
         {
             self::writeFileDBConfig();
         }
-
+        */
         if (!empty(InstallDBPage::$errors)) { //fail at running either, db scipt or creating "inc/dbconfig.inc.php" file.
             InstallDBPage::renderContents();
         } else {

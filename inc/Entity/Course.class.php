@@ -76,11 +76,6 @@ private $Wait;
     return $this->Title;
 }
 
- //Verify the password
- function verifyPassword(string $passwordToVerify) {
-     //Return a boolean based on verifying if the password given is correct for the current user
-     return password_verify($passwordToVerify, $this->password);
- }
     
 }
 

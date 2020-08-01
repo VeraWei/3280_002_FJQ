@@ -50,7 +50,7 @@ class Route {
         if ( ! in_array($routeId,self::$validRoutes) ){
             header('HTTP/1.0 404 Not Found');
             if (!file_exists('inc/dbconfig.inc.php')) {
-                echo "'inc/dbconfig.inc.php' is missing on the server. Go to the main page Team1.php to create it.";
+                echo "'inc/dbconfig.inc.php' is missing on the server. Go to the main page <a href='Team1.php'>Team1.php</a> to create it.";
             } else {
                 echo "Method: ".$_SERVER["REQUEST_METHOD"]."\n<br>";
                 echo "Route: " . $_GET["route"] . "\n<br>";

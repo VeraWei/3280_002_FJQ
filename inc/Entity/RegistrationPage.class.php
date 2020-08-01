@@ -42,96 +42,98 @@ class RegistrationPage extends SuperPage {
             <?php static::onMessage(); ?>
             <article>
     <?php }
+    //End PrintHeader()
     
-        static function body() {
-            self::printTable();
-            //Fernando's function here
-            self::PrintForm();
-            self::PrintCourseInfo();
-        }
+    static function body() {
+        self::printTable();
+        self::PrintForm();
+        self::PrintCourseInfo();
+    }
 
-       static function printTable() {
-        $RegistrationUser = self::$RegistrationUser;
-            ?>
-            <section class="main">
-            <table class="table table-striped table-dark">
-             <thead>
-                <tr>
-                    <th>CRN</th>
-                    <th>Subject</th>
-                    <th>Title</th>
-                    <th>Registered on:</th>
-                    <th>Drop</th>
-                </tr>
-                <?php 
-                foreach($RegistrationUser as $courses)
-                {
-                    self::$coursesArray[] = $courses->getSubject()."-".$courses->getCRN();
-                    echo "<tr>";
-                        echo "<td>".$courses->getCRN() ."</td>";
-                        echo "<td>".$courses->getSubject() ."</td>";
-                        echo "<td>".$courses->getTitle() ."</td>";
-                        echo "<td>".$courses->getRegistrationDate() ."</td>";
-                        echo "<td><a href='delete-registration?crn=" . $courses->getCRN() . "&subject=" . $courses->getSubject() . "'>drop course</a></td>";
-                        
-                    echo "</tr>";
-                }
-                ?>
-            </thead>
-            </table>
-            <form method="post">
-                <label for="tuition"><strong>Tuition Due:</strong></label>
-                <input type="text" disabled value="<?php echo self::$Tuition->getAmountOwing();?>"/>
-                <input type="number" name="payment"/>
-                <input class="btn btn-primary btn-sm" type="submit" name="TuitionSubmit" value="Pay Tuition"/>
-
-            </form>
-            </section>
+    //Print all the course information registred by a student
+    static function printTable() {
+    $RegistrationUser = self::$RegistrationUser;
+        ?>
+        <section class="main">
+        <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+                <th>CRN</th>
+                <th>Subject</th>
+                <th>Title</th>
+                <th>Registered on:</th>
+                <th>Drop</th>
+            </tr>
             <?php 
-                }
-
-            static function PrintForm() {
-                $CourseList = self::$CourseList;
-            ?>
-            <section class="form1">
-            <form  method="POST">
-                <select class="custom-select" name="courses" id="courses" >
-                    <option disabled selected>Choose your course</option>
-                    <?php
-                foreach($CourseList as $CourseID) {
-                    $value = $CourseID->getSubject()."-".$CourseID->getCRN();
-                    if (in_array( $value, self::$coursesArray)){
-                        echo "<option value='". $value ."' disabled>".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
-                    } else {
-                        if(isset($_POST['courses']) && $_POST['courses']== $value)
-                            $select = "selected";
-                        else
-                            $select = '';
-                        echo "<option value='". $value ."'" . $select . ">".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
-                    }
-                }
-                    ?>
-                </select>
-                <br>
-                <br>
-                <br>
-                <button class="btn btn-primary" type="submit" name="action" value="Show Info"> Show Info</button>
-                <button class="btn btn-outline-primary" type="submit" name="action" value="Register"> Register</button>
+            foreach($RegistrationUser as $courses)
+            {
+                self::$coursesArray[] = $courses->getSubject()."-".$courses->getCRN();
+                echo "<tr>";
+                    echo "<td>".$courses->getCRN() ."</td>";
+                    echo "<td>".$courses->getSubject() ."</td>";
+                    echo "<td>".$courses->getTitle() ."</td>";
+                    echo "<td>".$courses->getRegistrationDate() ."</td>";
+                    echo "<td><a href='delete-registration?crn=" . $courses->getCRN() . "&subject=" . $courses->getSubject() . "'>drop course</a></td>";
                     
-            </form>
-
-            <?php
+                echo "</tr>";
             }
+            ?>
+        </thead>
+        </table>
+        <!-- Tuition payment form -->
+        <form method="post">
+            <label for="tuition"><strong>Tuition Due:</strong></label>
+            <input type="text" disabled value="<?php echo self::$Tuition->getAmountOwing();?>"/>
+            <input type="number" name="payment"/>
+            <input class="btn btn-primary btn-sm" type="submit" name="TuitionSubmit" value="Pay Tuition"/>
+        </form>
+        </section>
+        <?php }
 
-            static function PrintCourseInfo() {
-                if ( (!isset(self::$CourseInfo)) || (!isset(self::$Instructor)) ){
-                    return;
+        //Course list in the select button
+        static function PrintForm() {
+            $CourseList = self::$CourseList;
+        ?>
+        <section class="form1">
+        <form  method="POST">
+            <select class="custom-select" name="courses" id="courses" >
+                <option disabled selected>Choose your course</option>
+                <?php
+            foreach($CourseList as $CourseID) {
+                $value = $CourseID->getSubject()."-".$CourseID->getCRN();
+                if (in_array( $value, self::$coursesArray)){
+                    echo "<option value='". $value ."' disabled>".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
+                } else {
+                    if(isset($_POST['courses']) && $_POST['courses']== $value)
+                        $select = "selected";
+                    else
+                        $select = '';
+                    echo "<option value='". $value ."'" . $select . ">".$CourseID->getSubject()."-".$CourseID->getCRN()."</option>";
                 }
-                $CourseInfo = self::$CourseInfo; 
-                $Instructor = self::$Instructor;
+            }
                 ?>
+            </select>
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-primary" type="submit" name="action" value="Show Info"> Show Info</button>
+            <button class="btn btn-outline-primary" type="submit" name="action" value="Register"> Register</button>
+                
+        </form>
+
+        <?php }
+
+        //This function will print the course information when the user clicks the show info button 
+        static function PrintCourseInfo() {
+            if ( (!isset(self::$CourseInfo)) || (!isset(self::$Instructor)) ){
+                return;
+            }
+            //Prints course information and then prints course instructor information underneath.
+            $CourseInfo = self::$CourseInfo; 
+            $Instructor = self::$Instructor;
+            ?>
             <table class="table table-bordered table-dark">
-             <thead style="background: rgba(0, 0, 0, 0)">
+                <thead>
                 <tr>
 
                     <th>Title</th>
@@ -172,9 +174,8 @@ class RegistrationPage extends SuperPage {
                 <tr></tr>
             </thead>
             </table>
-    
-                <?php
-                }
+
+        <?php }
 
 }
 ?>

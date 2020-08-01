@@ -1,48 +1,15 @@
 <?php
-/* 
-1. Courses
-+--------------+-------------+------+-----+---------+-------+
-| Field        | Type        | Null | Key | Default | Extra |
-+--------------+-------------+------+-----+---------+-------+
-| CRN          | smallint    | NO   | PRI | NULL    |       |
-| Credits      | int         | NO   |     | NULL    |       |
-| Subject      | varchar(35) | NO   | PRI | NULL    |       |
-| Title        | char(150)   | NO   |     | NULL    |       |
-| InstructorID | int         | YES  | MUL | NULL    |       |
-| PreReq       | bit(1)      | NO   |     | b'0'    |       |
-| Duration     | int         | NO   |     | NULL    |       |
-| Enrl         | int         | NO   |     | NULL    |       |
-| Rem          | int         | NO   |     | NULL    |       |
-| Wait         | int         | NO   |     | NULL    |       |
-+--------------+-------------+------+-----+---------+-------+
-
-.............................................................
-
-2. Students_Courses
-+------------------+-------------+------+-----+---------+-------+
-| Field            | Type        | Null | Key | Default | Extra |
-+------------------+-------------+------+-----+---------+-------+
-| CRN              | smallint    | NO   | PRI | NULL    |       |
-| StudentID        | int         | NO   | PRI | NULL    |       |
-| RegistrationDate | date        | NO   |     | NULL    |       |
-| Subject          | varchar(35) | NO   | PRI | NULL    |       |
-+------------------+-------------+------+-----+---------+-------+
-
-*/
 
 class RegistrationDAO  {
 
-
     //Static DB member to store the database    
     public static $db;
-    //Initialize the ReservationDAO
+    //Initialize the RegistrationDAO
     static function initialize($className)    {
         //Remember to send in the class name for this DAO
         self::$db = new PDOService($className);
     }
 
-    // One of the functionality for the class abstracted by this DAO: CREATE
-    // Remember that Create means INSERT
     static function addRegistration(Course $RegistrationCourse, $userID) {
         $Enrl = $RegistrationCourse->getEnrl();
         $Rem = $RegistrationCourse->getRem();
@@ -79,12 +46,8 @@ class RegistrationDAO  {
         self::$db->execute();
 
         TuitionDAO::updateTuition($userID, 600);
-
-
     }
     
-    // GET = READ = SELECT
-    // This is for a single result.... when do I need it huh?
     static function getCourses(int $StudentID)  {
         $selectCourses = "SELECT * FROM COURSES JOIN STUDENTS_COURSES
         ON COURSES.CRN = STUDENTS_COURSES.CRN JOIN STUDENTS
@@ -102,13 +65,12 @@ class RegistrationDAO  {
     static function getCourseList()  {
         $selectCourses = "SELECT Subject, CRN FROM COURSES;";
         
-        //QUERY, BIND, EXECUTE, RETURN
         self::$db->query($selectCourses);
         self::$db->execute();
         return self::$db->resultSet();
     }
     
-    // DELETE
+    // Drop Registration
     static function deleteRegistration() {
         $StudentId = $_SESSION['loggedin'];
         $deleteQuery = "DELETE FROM Students_Courses WHERE StudentId = :StudentId And CRN = :CRN And Subject = :Subject ;";
