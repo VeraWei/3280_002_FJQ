@@ -60,7 +60,7 @@ private $Wait;
  function getPreReq(){
      return $this->PreReq;
  }
- function getDuratoin(){
+ function getDuration(){
      return $this->Duration;
  }
  function getEnrl(){
@@ -72,12 +72,10 @@ private $Wait;
  function getWait(){
      return $this->Wait;
  }
+ function getTitle(){
+    return $this->Title;
+}
 
- //Verify the password
- function verifyPassword(string $passwordToVerify) {
-     //Return a boolean based on verifying if the password given is correct for the current user
-     return password_verify($passwordToVerify, $this->password);
- }
     
 }
 

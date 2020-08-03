@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# if it is not an existing file
+# HTTP requests must not be processed. All static files referenced in http responses use path relative to root folder of the project and we don't want to have php files processed without been exlicitly dispatched by our main controller Team1.php 
+# RewriteCond %{REQUEST_FILENAME} -f
+
+# if it is not an existing directory
+# RewriteCond %{REQUEST_FILENAME} !-d
+
+# if it is not an image or csss
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+
+#References:
+# https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_qsa
+# https://httpd.apache.org/docs/2.4/rewrite/flags.html#flag_l
+#
+# https://httpd.apache.org/docs/2.4/rewrite/intro.html#regex
+
+RewriteRule ^(.+)$ Team1.php?route=$1  [L,QSA]
+

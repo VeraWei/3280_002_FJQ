@@ -2,6 +2,8 @@
 
 class RegistrationUser {
 
+
+
     //Properties
    private $CRN;
    private $Credits;
@@ -13,7 +15,9 @@ class RegistrationUser {
    private $Enrl;
    private $Rem;
    private $Wait;
-
+   private $RegistrationDate;
+        
+    
     //Setters
     function setCRN($crn){
         $this->CRN = $crn;
@@ -45,12 +49,18 @@ class RegistrationUser {
     function setWait($wait){
         $this->Wait = $wait;
     }
+    function setRegistrationDate($registrationdate) {
+        $this->RegistrationDate = $registrationdate;
+    }
     //Getters
     function getCRN() : int {
         return $this->CRN;
     }
     function getCredits() : string {
         return $this->Credits;
+    }
+    function getTitle() : string {
+        return $this->Title;
     }
     function getSubject() : string {
         return $this->Subject;
@@ -61,7 +71,7 @@ class RegistrationUser {
     function getPreReq(){
         return $this->PreReq;
     }
-    function getDuratoin(){
+    function getDuration(){
         return $this->Duration;
     }
     function getEnrl(){
@@ -73,12 +83,10 @@ class RegistrationUser {
     function getWait(){
         return $this->Wait;
     }
-
-    //Verify the password
-    function verifyPassword(string $passwordToVerify) {
-        //Return a boolean based on verifying if the password given is correct for the current user
-        return password_verify($passwordToVerify, $this->password);
+    function getRegistrationDate(){
+        return $this->RegistrationDate;
     }
+
 }
 
 
